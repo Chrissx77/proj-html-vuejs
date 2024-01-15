@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <h1>SONO HOME</h1>
+  <h1>SONO HOME scritto da antonio </h1>
 </template>
 
 <style lang="scss" scoped>

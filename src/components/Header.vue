@@ -9,7 +9,7 @@ export default {
   <div class="barra-ricerca">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href=""
           ><img src="../assets/logo.png" alt=""
         /></a>
         <!-- bottone per fare drop down delle pagine disponibili -->
@@ -31,23 +31,23 @@ export default {
           <!-- ul per cambiare pagine  -->
           <ul class="navbar-nav p-2">
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="">
                 <router-link :to="{ name: 'home' }"> home </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="">
                 <router-link :to="{ name: 'about' }"> about </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="">
                 <router-link :to="{ name: 'contacts' }"> contacts </router-link>
               </a>
             </li>
           </ul>
           <span id="citazione">
-            <a href="#"> Get a Quote </a>
+            <a href=""> Get a Quote </a>
           </span>
         </div>
       </div>
@@ -63,6 +63,7 @@ export default {
   width: 100%;
   position: fixed;
   z-index: 100;
+  background-color: rgb(38, 2, 98);
   // caratteristiche navbar
   nav {
     @include contain;
@@ -86,13 +87,13 @@ export default {
       color: white;
     }
   }
-  // caratteristiche hover li dentro alla lista delle pagine 
+  // caratteristiche hover li dentro alla lista delle pagine
   li a:hover {
     color: $orange;
   }
 }
 
-// caratteristiche al cambiare della larghezza shermo 
+// caratteristiche al cambiare della larghezza shermo
 @media screen and (max-width: 991px) {
   #navbarNavDropdown {
     background-color: #260458;
@@ -110,5 +111,9 @@ export default {
       border-radius: 25px;
     }
   }
+}
+
+.red {
+  background-color: red;
 }
 </style>

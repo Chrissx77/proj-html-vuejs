@@ -1,8 +1,11 @@
 <script>
-import LoveAnimation from './LoveAnimation.vue'; 
+import LoveAnimation from './LoveAnimation.vue';
 import Facts from './Facts.vue';
 import SectionTeam from './SectionTeam.vue';
 import Client from './Client.vue';
+import Jumbotron from './Jumbotron.vue';
+
+
 
 export default {
   name: "Home",
@@ -11,12 +14,14 @@ export default {
     Facts,
     SectionTeam,
     Client,
+    Jumbotron,
   }
   
 };
 </script>
 
 <template>
+  <Jumbotron/>
   <LoveAnimation/>
   <Facts/>
   <SectionTeam/>

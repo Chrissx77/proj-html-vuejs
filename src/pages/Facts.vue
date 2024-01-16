@@ -70,7 +70,12 @@ section {
 
   .globe-img {
     position: absolute;
-    max-width: 300px;
+    max-width: 350px;
+    top: 50%;
+    left: 50%;
+    animation: rotazione 30s linear infinite;
+    animation-delay: 0.3s;
+    transform: translate(-50%, -50%);
     img {
       width: 100%;
     }
@@ -79,6 +84,9 @@ section {
     @include contain;
     padding: 100px 0;
 
+    h1 {
+      z-index: 100;
+    }
     .cards {
       border: 1px solid white;
       border-radius: 10px;
@@ -89,6 +97,12 @@ section {
         color: $orange;
       }
     }
+  }
+}
+
+@keyframes rotazione {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 }
 </style>

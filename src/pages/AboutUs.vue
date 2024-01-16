@@ -71,7 +71,7 @@ export default {
       </div>
     </div>
   </section>
-  <LoveAnimation class="py-0" />
+  <LoveAnimation class="pt-0 pb-4" />
   <Facts />
   <SectionTeam />
   <Client />

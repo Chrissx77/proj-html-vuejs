@@ -65,7 +65,7 @@ export default {
 @use "../style/partials/mixins" as *;
 section {
   background-image: url(../assets/counter-bg.png);
-  margin-top: 100px;
+  margin-top: 200px;
   position: relative;
 
   .globe-img {

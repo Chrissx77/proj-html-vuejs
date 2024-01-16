@@ -1,16 +1,27 @@
 <script>
+import LoveAnimation from './LoveAnimation.vue'; 
+import Facts from './Facts.vue';
+import SectionTeam from './SectionTeam.vue';
+import Client from './Client.vue';
+
 export default {
   name: "AboutUs",
+  components:{
+    LoveAnimation,
+    Facts,
+    SectionTeam,
+    Client,
+  }
+  
 };
 </script>
 
 <template>
-  <!-- Componente: 3D MODELING -->
-  <!-- Componente: FACTS -->
-  <!-- Componente: ANIMATE YOUR PROJECT -->
-  <!-- Componente: WE LOVE -->
-
-  <h1>SONO ABOUT US</h1>
+  <h1>ABOUT</h1>
+  <LoveAnimation/>
+  <Facts/>
+  <SectionTeam/>
+  <Client/>
 </template>
 
 <style lang="scss" scoped>

@@ -2,6 +2,7 @@
 import LoveAnimation from './LoveAnimation.vue'; 
 import Facts from './Facts.vue';
 import SectionTeam from './SectionTeam.vue';
+import Client from './Client.vue';
 
 export default {
   name: "Home",
@@ -9,6 +10,7 @@ export default {
     LoveAnimation,
     Facts,
     SectionTeam,
+    Client,
   }
   
 };
@@ -18,12 +20,7 @@ export default {
   <LoveAnimation/>
   <Facts/>
   <SectionTeam/>
-
-  <!-- Componente: FACTS -->
-  <!-- Componente: ANIMATE YOUR PROJECT -->
-  <!-- Componente: WE LOVE -->
-
-  <h1>SONO HOME scritto da antonio</h1>
+  <Client/>
 </template>
 
 <style lang="scss" scoped>

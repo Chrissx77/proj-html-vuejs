@@ -1,12 +1,14 @@
 <script>
 import LoveAnimation from './LoveAnimation.vue'; 
-import Facts from './Facts.vue'; 
+import Facts from './Facts.vue';
+import SectionTeam from './SectionTeam.vue';
 
 export default {
   name: "Home",
   components:{
     LoveAnimation,
     Facts,
+    SectionTeam,
   }
   
 };
@@ -15,6 +17,8 @@ export default {
 <template>
   <LoveAnimation/>
   <Facts/>
+  <SectionTeam/>
+
   <!-- Componente: FACTS -->
   <!-- Componente: ANIMATE YOUR PROJECT -->
   <!-- Componente: WE LOVE -->

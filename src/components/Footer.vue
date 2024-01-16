@@ -7,13 +7,20 @@ export default {
 <template>
   <div class="footer">
     <div class="content">
+      <div class="shape-top">
+        <img src="../assets/shape-top.png" alt="##">
+      </div>
       <div class="content__text">
+        <h6 class="text__title">We Create New Worlds!</h6>
         <h3 class="text__title">Want Tips On Your Storytelling?</h3>
         <p class="text__description">Join our newsletter for tips on how to elevate your brand through storytelling.</p>
         <form class="text__form">
-          <input type="email" placeholder="Enter your email" required>
+          <input type="email" placeholder="Enter Your Email" required>
           <button type="submit">Submit</button>
         </form>
+      </div>
+      <div class="shape-bottom">
+        <img src="../assets/shape-bottom.png" alt="##">
       </div>
       <div class="content__logo">
         <img src="../assets/footer-logo.png" alt="ANIDIO logo">
@@ -27,14 +34,14 @@ export default {
           <li class="list__item"><a href="#">Contact</a></li>
         </ul>
         <div class="menu__social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
         </div>
       </div>
     </div>
     <div class="bottom">
-      <p class="text-center mt-3">Copyright © 2022 <a href="#">Softvirus</a>. Tutti i diritti riservati.</p>
+      <p class=" mt-3">Copyright © 2022 <a href="#">Softvirus</a>. Tutti i diritti riservati.</p>
     </div>
   </div>
 </template>
@@ -42,4 +49,35 @@ export default {
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
 @use '../style/partials/mixins' as *;
+
+.menu__list{
+  list-style-type: 0;
+}
+// stili generali contenitore viola e del suo interno
+.content__text{
+  background-image: url(../assets/counter-bg.png);
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  
+}
+.content__text h3{
+  width: 350px;
+  margin: 0 auto;
+}
+
+.content__text h6{
+  color: #FF7A36;
+}
+
+// stili bottoni
+.text__form input, button{
+  border-radius: 15px;
+  padding: 5px;
+  border: none;
+}
+
+.text__form button{
+  background-color: #FFDFED;
+}
 </style>

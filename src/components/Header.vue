@@ -59,11 +59,12 @@ export default {
 .barra-ricerca {
   width: 100%;
   position: fixed;
+  z-index: 100;
   nav {
     @include contain;
 
     a {
-      color: black;
+      color: white;
     }
 
     .quote {

@@ -20,10 +20,10 @@ export default {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="text-white"><i class="fa-solid fa-bars"></i></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end"
+          class="collapse navbar-collapse justify-content-end py-2"
           id="navbarNavDropdown"
         >
           <ul class="navbar-nav p-2">
@@ -42,10 +42,10 @@ export default {
                 <router-link :to="{ name: 'contacts' }"> contacts </router-link>
               </a>
             </li>
-            <div id="citazione" class="nav-item my-1 ps-2 quote">
-              <a href="#"> Get a Quote </a>
-            </div>
           </ul>
+          <span id="citazione" class="my-1 ps-2 quote">
+            <a href="#"> Get a Quote </a>
+          </span>
         </div>
       </div>
     </nav>
@@ -77,21 +77,29 @@ li a:hover {
   color: orange;
 }
 
+#citazione:hover a {
+  background-color: #260458;
+  color: white;
+  border: 1px solid white;
+}
+
 @media screen and (max-width: 991px) {
-  ul {
+  #navbarNavDropdown {
     background-color: #260458;
 
     li {
       border: 1px solid white;
     }
+  }
 
-    #citazione {
-      display: inline-block;
-      a {
-        padding: 5px;
-        background-color: pink;
-        border-radius: 15px;
-      }
+  #citazione {
+    display: inline-block;
+
+    a {
+      color: black;
+      padding: 10px;
+      background-color: pink;
+      border-radius: 25px;
     }
   }
 }

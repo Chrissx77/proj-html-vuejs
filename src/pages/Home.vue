@@ -5,7 +5,12 @@ export default {
 </script>
 
 <template>
-  <h1>SONO HOME scritto da antonio </h1>
+  <!-- Componente: 3D MODELING -->
+  <!-- Componente: FACTS -->
+  <!-- Componente: ANIMATE YOUR PROJECT -->
+  <!-- Componente: WE LOVE -->
+
+  <h1>SONO HOME scritto da antonio</h1>
 </template>
 
 <style lang="scss" scoped>

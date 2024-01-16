@@ -15,8 +15,10 @@ export default {
         <h3 class="text__title">Want Tips On Your Storytelling?</h3>
         <p class="text__description">Join our newsletter for tips on how to elevate your brand through storytelling.</p>
         <form class="text__form">
-          <input type="email" placeholder="Enter Your Email" required>
-          <button type="submit">Submit</button>
+          <div class="contenitore_serch">
+            <input type="email" placeholder="Enter Your Email" required>
+            <button type="submit"><b>submit</b></button>
+          </div>
         </form>
       </div>
       <div class="shape-bottom">
@@ -71,10 +73,32 @@ export default {
 }
 
 // stili bottoni
-.text__form input, button{
-  border-radius: 15px;
+
+.contenitore_serch{
+  border-radius: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 400px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.contenitore_serch b{
+  font-weight: 480;
+  padding: 15px;
+}
+
+.contenitore_serch input{
+  width: 70%;
+  height: 100%;
+}
+.text__form button, input{
+  border-radius: 20px;
   padding: 5px;
   border: none;
+  outline: none;
 }
 
 .text__form button{

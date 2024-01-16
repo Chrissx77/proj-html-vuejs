@@ -26,20 +26,20 @@ export default {
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavDropdown"
         >
-          <ul class="navbar-nav">
-            <li class="nav-item">
+          <ul class="navbar-nav p-2">
+            <li class="nav-item my-1 ps-2">
               <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'about' }"> about </router-link>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-1  ps-2">
               <!-- <a class="nav-link" href="#"> -->
               <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'home' }"> home </router-link>
               </a>
               <!-- </a> -->
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-1  ps-2">
               <a class="nav-link" href="#">
                 <router-link :to="{ name: 'contacts' }"> contacts </router-link>
               </a>
@@ -63,6 +63,23 @@ export default {
 
     a {
       color: black;
+    }
+  }
+}
+
+li a:hover {
+  color: orange;
+}
+
+// ul {
+//   background-color: #751db3;
+// }
+@media screen and (max-width: 991px) {
+  ul {
+    background-color: #260458;
+
+    li {
+      border: 1px solid white;
     }
   }
 }

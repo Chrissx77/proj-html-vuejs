@@ -61,7 +61,7 @@ export default {
 @use "../style/partials/mixins" as *;
 
 .wrap {
-  padding: 16% 0;
+  padding-top: 16%;
   @include flex;
   text-align: center;
   align-items: center;

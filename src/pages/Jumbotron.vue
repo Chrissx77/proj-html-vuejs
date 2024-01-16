@@ -67,7 +67,7 @@ export default {
 
 
 .hero {
-  padding: 150px 0px;
+  padding-top: 150px 0px;
   background-image: url("../assets/banner-bg.png");
   background-repeat: no-repeat;
   background-size: cover;

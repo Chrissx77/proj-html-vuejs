@@ -37,13 +37,12 @@ export default {
 </script>
 
 <template>
-  <h1>SONO SECTION TEAM</h1>
-  <div v-for="(card, i) in cardTeam" >
-    <img :src= card.image alt="">
-    {{ card.name }}
-    {{ card.label }}
-  </div>
-
+    <h1>SONO SECTION TEAM</h1>
+    <div v-for="(card, i) in cardTeam" >
+      <img :src= card.image alt="">
+      {{ card.name }}
+      {{ card.label }}
+    </div>
 </template>
 
 <style lang="scss" scoped>

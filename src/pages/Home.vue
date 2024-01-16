@@ -1,11 +1,17 @@
 <script>
+import LoveAnimation from './LoveAnimation.vue'; 
+
 export default {
   name: "Home",
+  components:{
+    LoveAnimation,
+  }
+  
 };
 </script>
 
 <template>
-  <!-- Componente: 3D MODELING -->
+  <LoveAnimation/>
   <!-- Componente: FACTS -->
   <!-- Componente: ANIMATE YOUR PROJECT -->
   <!-- Componente: WE LOVE -->

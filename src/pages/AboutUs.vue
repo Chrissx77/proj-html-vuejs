@@ -16,34 +16,53 @@ export default {
 </script>
 
 <template>
-  <div class="jumbotron-bg">
-    <div class="globo-img1">
-      <img src="../assets/globe1.png" alt="immagine pianeta" />
-    </div>
-    <div class="globo-img3">
-      <img src="../assets/globe3.png" alt="immagine pianeta" />
-    </div>
-    <div class="globe-img2">
-      <img
-        src="../assets/globe2.png"
-        alt="immagine pianeta"
-        class="globo-img2"
-      />
-    </div>
-    <div class="row contenitore">
-      <div class="col-6 jumbotron-left">
-        <h1>About us</h1>
-        <img src="../assets/dots-right.png" alt="" />
+  <div class="jumbotron-bg position-relative d-flex">
+    <div class="row">
+      <div class="col-12">
+        <div class="globo-img1 position-absolute">
+          <img src="../assets/globe1.png" alt="immagine pianeta" />
+        </div>
+        <div class="globo-img3 position-absolute">
+          <img src="../assets/globe3.png" alt="immagine pianeta" />
+        </div>
+        <div class="globe-img2 position-absolute">
+          <img
+            src="../assets/globe2.png"
+            alt="immagine pianeta"
+            class="globo-img2"
+          />
+        </div>
+        <div class="container">
+          <div class="row contenitore">
+            <div class="col-6 jumbotron-left">
+              <div class="position-absolute about-us">
+                <h1>About us</h1>
+                <div class="mt-4">
+                  <a>
+                    <router-link :to="{ name: 'home' }"> home </router-link>
+                  </a>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <a href=""> about us</a>
+                </div>
+              </div>
+              <img src="../assets/dots-right.png" alt="" />
+            </div>
+            <div class="col-6 jumbotron-right">
+              <img src="../assets/dots-left.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="light-img position-absolute">
+          <img src="../assets/light.png" alt="" />
+        </div>
+        <div class="img-persona position-absolute">
+          <img src="../assets/rocket-banner.png" alt="" />
+        </div>
+        <div class="onde position-absolute">
+          <img src="../assets/bottom-shape.png" alt="" />
+        </div>
       </div>
-      <div class="col-6 jumbotron-right">
-        <img src="../assets/dots-left.png" alt="" />
-      </div>
     </div>
-    <div class="light-img">
-      <img src="../assets/light.png" alt="" />
-    </div>
-    <img src="../assets/rocket-banner.png" alt="" class="img-persona" />
-    <img src="../assets/bottom-shape.png" alt="" class="onde" />
   </div>
   <LoveAnimation />
   <Facts />
@@ -55,50 +74,48 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+// inizio sezione jumbotron
 .jumbotron-bg {
   background-image: url(../assets/banner-bg.png);
   background-size: cover;
-  height: 500px;
-  position: relative;
-  display: flex;
+  min-height: 400px;
+  img {
+    width: 100%;
+  }
 
   .contenitore {
     @include contain;
+
+    .jumbotron-left .about-us {
+      top: 200px;
+      color: $white;
+      a {
+        color: $white;
+      }
+    }
   }
 
   .onde {
-    position: absolute;
     bottom: 0px;
-    width: 100%;
-  }
-
-  .jumbotron-left img,
-  .jumbotron-right img {
-    width: 100%;
-  }
-
-  .jumbotron-left h1 {
-    position: relative;
-    top: 250px;
-    color: $white;
   }
 
   .img-persona {
-    position: absolute;
-    width: 350px;
+    width: 300px;
     top: 100px;
     right: 150px;
+    animation: rocket 2s linear infinite;
+    animation-delay: 0.3s;
   }
   .globo-img1 {
-    position: absolute;
     top: 12%;
     left: 9%;
     width: 130px;
     height: 130px;
+    animation: rotazione 4s linear infinite;
+    animation-delay: 0.2s;
   }
 
   .globo-img3 {
-    position: absolute;
     top: -18%;
     left: 33%;
     max-width: 300px;
@@ -106,18 +123,61 @@ export default {
   }
 
   .globe-img2 {
-    position: absolute;
     top: 18%;
     right: 28%;
     width: 100px;
     height: 100px;
+    animation: rotazione 4s linear infinite;
+    animation-delay: 0.2s;
   }
 
   .light-img {
-    position: absolute;
     right: 9%;
     top: 10%;
     z-index: 1;
+    animation: light 2s linear infinite;
   }
 }
+
+@keyframes rotazione {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rocket {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes light {
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .col-12 > .globo-img3,
+  .img-persona {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .col-12 > .light-img {
+    display: none;
+  }
+}
+// fine sezione jumbotron
 </style>

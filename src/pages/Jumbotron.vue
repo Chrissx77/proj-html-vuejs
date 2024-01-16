@@ -128,9 +128,12 @@ export default {
         }
         i{
           position: absolute;
-          left: 45%;
-          top: 45%;
+          left: 44%;
+          top: 44%;
           font-size: 3rem;
+          background-color: white;
+          border-radius: 50%;
+
         }
       }
       

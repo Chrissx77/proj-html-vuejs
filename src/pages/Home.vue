@@ -4,6 +4,8 @@ import Facts from './Facts.vue';
 import SectionTeam from './SectionTeam.vue';
 import Client from './Client.vue';
 import Jumbotron from './Jumbotron.vue';
+import FeaturedProductions from './FeaturedProductions.vue';
+
 
 
 
@@ -15,6 +17,7 @@ export default {
     SectionTeam,
     Client,
     Jumbotron,
+    FeaturedProductions,
   }
   
 };
@@ -24,6 +27,7 @@ export default {
   <Jumbotron/>
   <LoveAnimation/>
   <Facts/>
+  <FeaturedProductions/>
   <SectionTeam/>
   <Client/>
 </template>

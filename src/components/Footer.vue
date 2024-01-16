@@ -24,27 +24,51 @@ export default {
       <div class="shape-bottom">
         <img src="../assets/shape-bottom.png" alt="##">
       </div>
-      <div class="content__logo">
-        <img src="../assets/footer-logo.png" alt="ANIDIO logo">
-      </div>
-      <div class="menu">
-        <ul class="menu__list">
-          <li class="list__item"><a href="#">About Us</a></li>
-          <li class="list__item"><a href="#">Portfolio</a></li>
-          <li class="list__item"><a href="#">Pricing</a></li>
-          <li class="list__item"><a href="#">Career</a></li>
-          <li class="list__item"><a href="#">Contact</a></li>
-        </ul>
-        <div class="menu__social">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+
+
+      <div class="cont_footer_top"> 
+
+        <div class="content__logo">
+          <img src="../assets/footer-logo.png" alt="ANIDIO logo">
         </div>
+
+        
+        <div class="contenitore_pulsanti">
+          <ul class="list_style">
+            <li class="list__item"><a href="#">About Us</a></li>
+            <li class="list__item"><a href="#">Portfolio</a></li>
+            <li class="list__item"><a href="#">Pricing</a></li>
+            <li class="list__item"><a href="#">Career</a></li>
+            <li class="list__item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
       </div>
+
+      <div class="style_hr">
+        <hr>
+      </div>
+
+      <div class="cont_footer_bottom">
+
+        <div class="Copyright">
+          <p class=" mt-3">Copyright © 2022 <a href="#">Softvirus</a>. Tutti i diritti riservati.</p>
+        </div>
+
+        <div class="menu">
+          
+          <div class="menu__social">
+            <div><i class="fa-brands fa-facebook"></i></div>
+            <div><i class="fa-brands fa-twitter"></i></div>
+            <div><i class="fa-brands fa-instagram"></i></div>  
+          </div>
+  
+        </div>
+
+      </div>
+      
     </div>
-    <div class="bottom">
-      <p class=" mt-3">Copyright © 2022 <a href="#">Softvirus</a>. Tutti i diritti riservati.</p>
-    </div>
+    
   </div>
 </template>
 
@@ -103,5 +127,81 @@ export default {
 
 .text__form button{
   background-color: #FFDFED;
+}
+
+// stili navbar bottom (top)
+
+.cont_footer_top{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list_style{
+  display: flex;
+  justify-content: space-between;
+}
+
+.list__item{
+  align-items: center;
+}
+
+.list__item a{
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+.list__item a:hover{
+  color: blue;
+  font-weight: 500;
+}
+
+.contenitore_pulsanti{
+  width: 400px;
+}
+// mod hr
+.style_hr{
+  width: 80%;
+  margin: 0 auto;
+}
+
+// stili navbar bottom
+
+.cont_footer_bottom{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu__social{
+  display: flex;
+}
+
+.menu__social div i{
+  color: blueviolet;
+}
+
+.menu__social div:hover{
+  background-color: orange;
+}
+
+.menu__social div i:hover{
+  color: #fff;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu__social div{
+  border-radius: 100%;
+  border: 1px solid lightgray;
+  cursor : pointer;
+  display: flex;
+  padding: 5px;
+  margin-inline: 5px;
 }
 </style>

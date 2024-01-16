@@ -7,22 +7,29 @@ export default {
 <template>
   <div class="footer">
     <div class="content">
-      <div class="shape-top">
-        <img src="../assets/shape-top.png" alt="##">
-      </div>
       <div class="content__text">
-        <h6 class="text__title">We Create New Worlds!</h6>
-        <h3 class="text__title">Want Tips On Your Storytelling?</h3>
-        <p class="text__description">Join our newsletter for tips on how to elevate your brand through storytelling.</p>
-        <form class="text__form">
-          <div class="contenitore_serch">
-            <input type="email" placeholder="Enter Your Email" required>
-            <button type="submit"><b>submit</b></button>
-          </div>
-        </form>
-      </div>
-      <div class="shape-bottom">
-        <img src="../assets/shape-bottom.png" alt="##">
+        <div class="shape-">
+          <img src="../assets/shape-top.png" alt="##">
+        </div>
+
+        <div class="wrap-container">
+
+          <h6 class="text__title">We Create New Worlds!</h6>
+          <h3 class="text__title">Want Tips On Your Storytelling?</h3>
+          <p class="text__description">Join our newsletter for tips on how to elevate your brand through storytelling.</p>
+
+          <form class="text__form">
+            <div class="contenitore_serch">
+              <input type="email" placeholder="Enter Your Email" required>
+              <button type="submit"><b>submit</b></button>
+            </div>
+          </form>
+
+        </div>
+
+        <div class="shape-">
+          <img src="../assets/shape-bottom.png" alt="##">
+        </div>
       </div>
 
 
@@ -76,16 +83,23 @@ export default {
 @use '../style/partials/variables' as *;
 @use '../style/partials/mixins' as *;
 
+// stili generali contenitore viola e del suo interno
 .menu__list{
   list-style-type: 0;
 }
-// stili generali contenitore viola e del suo interno
 .content__text{
   background-image: url(../assets/counter-bg.png);
   background-size: cover;
-  color: #fff;
+  color: $white;
   text-align: center;
-  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 50px;
+}
+
+.wrap-{
+  widows: auto;
 }
 .content__text h3{
   width: 350px;
@@ -94,6 +108,7 @@ export default {
 
 .content__text h6{
   color: #FF7A36;
+  margin-top: 60px;
 }
 
 // stili bottoni
@@ -103,7 +118,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: $white;
   width: 400px;
   margin: 0 auto;
   padding: 5px;
@@ -125,8 +140,12 @@ export default {
   outline: none;
 }
 
+.text__form{
+  margin-bottom: 60px;
+}
+
 .text__form button{
-  background-color: #FFDFED;
+  background-color: $pink;
 }
 
 // stili navbar bottom (top)
@@ -181,16 +200,10 @@ export default {
 
 .menu__social div i{
   color: blueviolet;
+  &:hover{
+    color: $white;
+  }
 }
-
-.menu__social div:hover{
-  background-color: orange;
-}
-
-.menu__social div i:hover{
-  color: #fff;
-}
-
 .menu{
   display: flex;
   align-items: center;
@@ -198,10 +211,13 @@ export default {
 
 .menu__social div{
   border-radius: 100%;
-  border: 1px solid lightgray;
+  border: 1px solid $lightGray;
   cursor : pointer;
   display: flex;
   padding: 5px;
   margin-inline: 5px;
+  &:hover{
+    background-color: $orange;
+  }
 }
 </style>

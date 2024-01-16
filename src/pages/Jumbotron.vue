@@ -15,7 +15,13 @@ export default {
       </p>
       <button class="btn-project">Start a Project</button>
       <button class="btn-portfolio">Portfolio</button>
+      <div class="thumb">
+        <img src="../assets/middle.png" alt="">
+      </div>
+      
     </div>
+
+    
 
     <div class="starsLeft">
       <img src="../assets/dots-left.png" alt="" srcset="" />
@@ -45,18 +51,24 @@ export default {
       <img src="../assets/light.png" alt="" srcset="" />
     </div>
   </section>
+  <!-- <div class="banner">
+    <img src="../assets/bottom-shape.png" alt="" srcset="">
+  </div> -->
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+
 .hero {
-  padding: 30px 0px;
+  padding: 150px 0px;
   background-image: url("../assets/banner-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 700px;
   color: white;
-  background-position: center;
   @include flex;
   align-items: center;
   position: relative;
@@ -65,6 +77,7 @@ export default {
     width: 40%;
     margin: 0 auto;
     text-align: center;
+    position: relative;
 
     .label {
       color: $orange;
@@ -91,6 +104,14 @@ export default {
       &:hover {
         background-color: $white;
         color: black;
+      }
+    }
+
+    .thumb{
+      position: absolute;
+      img{
+        padding: 50px 0;
+        width: 100%;
       }
     }
   }

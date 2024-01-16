@@ -30,15 +30,20 @@ export default {
 </script>
 
 <template>
-  <h1>SONO LOVE ANIMATION</h1>
+  <div class="wrap">
+    <h1>SONO LOVE ANIMATION</h1>
   <div v-for="(card, i) in cardLoveAnimation">
     <img :src="card.image" alt="" />
     {{ card.title }}
     {{  card.paragraph }}
+  </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
+.wrap{
+  padding-top: 400px;
+}
 </style>

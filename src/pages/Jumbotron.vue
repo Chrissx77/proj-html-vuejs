@@ -118,7 +118,7 @@ export default {
     }
 
     .thumb{
-      z-index: 9999;
+      z-index: 90;
       position: absolute;
       div{
         position: relative;

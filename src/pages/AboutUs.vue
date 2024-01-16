@@ -16,9 +16,12 @@ export default {
 </script>
 
 <template>
-  <div class="jumbotron-bg position-relative d-flex">
+  <!-- inizio prima sezione jumbotron -->
+  <section class="jumbotron-bg position-relative d-flex">
     <div class="row">
+      <!-- contenitore contenente cose in generale  -->
       <div class="col-12">
+        <!-- inizio immagini usate per sfondo  -->
         <div class="globo-img1 position-absolute">
           <img src="../assets/globe1.png" alt="immagine pianeta" />
         </div>
@@ -32,6 +35,8 @@ export default {
             class="globo-img2"
           />
         </div>
+        <!-- fine immagini usate per sfondo  -->
+        <!-- inizio due contenitore dove ci saranno due sfondi e testo  -->
         <div class="container">
           <div class="row contenitore">
             <div class="col-6 jumbotron-left">
@@ -52,6 +57,7 @@ export default {
             </div>
           </div>
         </div>
+        <!-- inizio immagini usate per sfondo  -->
         <div class="light-img position-absolute">
           <img src="../assets/light.png" alt="" />
         </div>
@@ -61,9 +67,10 @@ export default {
         <div class="onde position-absolute">
           <img src="../assets/bottom-shape.png" alt="" />
         </div>
+        <!-- fine immagini usate per sfondo  -->
       </div>
     </div>
-  </div>
+  </section>
   <LoveAnimation />
   <Facts />
   <SectionTeam />
@@ -75,14 +82,16 @@ export default {
 @use "../style/partials/mixins" as *;
 
 // inizio sezione jumbotron
+// caratteristiche sfondo jumbotron
 .jumbotron-bg {
   background-image: url(../assets/banner-bg.png);
   background-size: cover;
   min-height: 400px;
+  // caratteristiche tutte immagini dentro a sezione 
   img {
     width: 100%;
   }
-
+// caratteristiche contenitore contenente due sfondi e testo 
   .contenitore {
     @include contain;
 
@@ -94,7 +103,7 @@ export default {
       }
     }
   }
-
+// caratteristiche e posizionamento di quasi tutte le immagini dentro alla sezione 
   .onde {
     bottom: 0px;
   }
@@ -138,7 +147,7 @@ export default {
     animation: light 2s linear infinite;
   }
 }
-
+// animazioni di immagini 
 @keyframes rotazione {
   0% {
     transform: rotate(360deg);

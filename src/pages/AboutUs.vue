@@ -71,7 +71,7 @@ export default {
       </div>
     </div>
   </section>
-  <LoveAnimation />
+  <LoveAnimation class="py-0" />
   <Facts />
   <SectionTeam />
   <Client />
@@ -87,11 +87,11 @@ export default {
   background-image: url(../assets/banner-bg.png);
   background-size: cover;
   min-height: 400px;
-  // caratteristiche tutte immagini dentro a sezione 
+  // caratteristiche tutte immagini dentro a sezione
   img {
     width: 100%;
   }
-// caratteristiche contenitore contenente due sfondi e testo 
+  // caratteristiche contenitore contenente due sfondi e testo
   .contenitore {
     @include contain;
 
@@ -103,7 +103,7 @@ export default {
       }
     }
   }
-// caratteristiche e posizionamento di quasi tutte le immagini dentro alla sezione 
+  // caratteristiche e posizionamento di quasi tutte le immagini dentro alla sezione
   .onde {
     bottom: 0px;
   }
@@ -147,7 +147,7 @@ export default {
     animation: light 2s linear infinite;
   }
 }
-// animazioni di immagini 
+// animazioni di immagini
 @keyframes rotazione {
   0% {
     transform: rotate(360deg);

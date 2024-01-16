@@ -52,7 +52,7 @@ export default {
 @use "../style/partials/mixins" as *;
 
 .hero {
-  padding: 170px 0 0;
+  padding: 30px 0px;
   background-image: url("../assets/banner-bg.png");
   min-height: 700px;
   color: white;

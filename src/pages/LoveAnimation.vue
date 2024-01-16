@@ -31,7 +31,7 @@ export default {
 
 <template>
   <h1>SONO LOVE ANIMATION</h1>
-  <div v-for="card in cardLoveAnimation">
+  <div v-for="(card, i) in cardLoveAnimation">
     <img :src="card.image" alt="" />
     {{ card.title }}
     {{  card.paragraph }}

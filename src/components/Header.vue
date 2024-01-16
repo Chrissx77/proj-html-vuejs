@@ -64,23 +64,28 @@ export default {
     @include contain;
 
     a {
-      color: white;
+      color: $white;
     }
-
-    .quote {
-      display: none;
+    #citazione {
+      display: inline-block;
+      a {
+        color: black;
+        padding: 10px;
+        background-color: $pink;
+        border-radius: 25px;
+        border: 1px solid $white;
+      }
     }
   }
 }
 
 li a:hover {
-  color: orange;
+  color: $orange;
 }
 
 #citazione:hover a {
   background-color: #260458;
-  color: white;
-  border: 1px solid white;
+  color: $white;
 }
 
 @media screen and (max-width: 991px) {
@@ -88,18 +93,7 @@ li a:hover {
     background-color: #260458;
 
     li {
-      border: 1px solid white;
-    }
-  }
-
-  #citazione {
-    display: inline-block;
-
-    a {
-      color: black;
-      padding: 10px;
-      background-color: pink;
-      border-radius: 25px;
+      border: 1px solid $white;
     }
   }
 }

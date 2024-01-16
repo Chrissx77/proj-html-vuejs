@@ -43,7 +43,7 @@ export default {
               </a>
             </li>
           </ul>
-          <span id="citazione" class="my-1 ps-2 quote">
+          <span id="citazione" class="">
             <a href="#"> Get a Quote </a>
           </span>
         </div>
@@ -64,23 +64,26 @@ export default {
     @include contain;
 
     a {
-      color: white;
+      color: $white;
     }
-
-    .quote {
-      display: none;
+    #citazione {
+      display: inline-block;
+      a {
+        padding: 5px;
+        background-color: pink;
+        border-radius: 15px;
+        border: 1px solid white;
+      }
+    }
+    #citazione:hover a {
+      background-color: #260458;
+      color: white;
     }
   }
 }
 
 li a:hover {
-  color: orange;
-}
-
-#citazione:hover a {
-  background-color: #260458;
-  color: white;
-  border: 1px solid white;
+  color: $orange;
 }
 
 @media screen and (max-width: 991px) {
@@ -88,17 +91,15 @@ li a:hover {
     background-color: #260458;
 
     li {
-      border: 1px solid white;
+      border: 1px solid $white;
     }
   }
 
   #citazione {
-    display: inline-block;
-
     a {
       color: black;
       padding: 10px;
-      background-color: pink;
+      background-color: $pink;
       border-radius: 25px;
     }
   }

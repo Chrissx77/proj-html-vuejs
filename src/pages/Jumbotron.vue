@@ -16,7 +16,10 @@ export default {
       <button class="btn-project">Start a Project</button>
       <button class="btn-portfolio">Portfolio</button>
       <div class="thumb">
-        <img src="../assets/middle.png" alt="">
+        <div>
+          <img src="../assets/middle.png" alt="">
+          <i class="fa-solid fa-circle-play" style="color: #a616ea;"></i>
+        </div>
       </div>
       
     </div>
@@ -50,10 +53,12 @@ export default {
     <div class="alien">
       <img src="../assets/light.png" alt="" srcset="" />
     </div>
+
+    <div class="banner">
+      <img src="../assets/bottom-shape.png" alt="" srcset="">
+    </div>
   </section>
-  <!-- <div class="banner">
-    <img src="../assets/bottom-shape.png" alt="" srcset="">
-  </div> -->
+  
 </template>
 
 <style lang="scss" scoped>
@@ -72,6 +77,11 @@ export default {
   @include flex;
   align-items: center;
   position: relative;
+
+  .banner{
+    position: absolute;
+    bottom: 0;
+  }
 
   .wrap {
     width: 40%;
@@ -108,11 +118,24 @@ export default {
     }
 
     .thumb{
+      z-index: 9999;
       position: absolute;
-      img{
-        padding: 50px 0;
-        width: 100%;
+      div{
+        position: relative;
+        img{
+          padding: 50px 0;
+          width: 100%;
+        }
+        i{
+          position: absolute;
+          left: 45%;
+          top: 45%;
+          font-size: 3rem;
+        }
       }
+      
+      
+
     }
   }
 

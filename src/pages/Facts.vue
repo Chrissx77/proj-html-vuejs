@@ -146,8 +146,6 @@ section {
   transition: all 0.9s;
   animation-name: comparsa;
   animation-duration: 2s;
-  opacity: 1;
-  transition-delay: 1ms;
 }
 
 @keyframes comparsa {

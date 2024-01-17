@@ -58,6 +58,7 @@ export default {
   mounted() {
     // elementi presi dentro al documento
     let elemento = document.querySelector(".service");
+    // console.log(elemento);
     // altezza elemento singolo dove si attiverà la transizione
     var elementRect = elemento.getBoundingClientRect();
     // evento
@@ -291,8 +292,7 @@ export default {
     color: blue;
   }
 }
-// fine sezione service
-// .red {
-//   background-color: red;
-// }
+.red {
+  background-color: red;
+}
 </style>

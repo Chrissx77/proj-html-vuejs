@@ -1,10 +1,30 @@
 <script>
+import Loading from './Loading.vue';
+
 export default {
   name: "Contacts",
+  components:{
+    Loading,
+  },
+
+  data(){
+    return{
+      isLoading: true,
+    }
+  },
+
+  mounted(){
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500)
+  },
+
+
 };
 </script>
 
 <template>
+  <Loading v-if="isLoading" />
   <div class="cont_titles">
     <h5>Contact Us</h5>
     <h1>How to Reach Us</h1>

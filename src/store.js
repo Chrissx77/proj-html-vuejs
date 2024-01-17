@@ -21,6 +21,5 @@ export const store = reactive({
             }
           });
         },
-
 });
 

@@ -102,13 +102,21 @@ export default {
   widows: auto;
 }
 .content__text h3{
-  width: 350px;
+  width: 400px;
   margin: 0 auto;
+  padding: 15px;
+  font-size: 40px;
 }
 
 .content__text h6{
   color: #FF7A36;
   margin-top: 60px;
+  font-size: 19px;
+}
+
+.wrap-container p{
+  font-size: 14px;
+  padding-bottom: 8px;
 }
 
 // stili bottoni
@@ -119,7 +127,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: $white;
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
   padding: 5px;
 }
@@ -129,9 +137,13 @@ export default {
   padding: 15px;
 }
 
-.contenitore_serch input{
+.contenitore_inputserch {
   width: 70%;
   height: 100%;
+}
+
+input::placeholder{
+  font-size: 13px;
 }
 .text__form button, input{
   border-radius: 20px;
@@ -155,6 +167,7 @@ export default {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  margin-top: 70px;
 }
 
 .list_style{
@@ -200,9 +213,6 @@ export default {
 
 .menu__social div i{
   color: blueviolet;
-  &:hover{
-    color: $white;
-  }
 }
 .menu{
   display: flex;
@@ -218,6 +228,9 @@ export default {
   margin-inline: 5px;
   &:hover{
     background-color: $orange;
+    i{
+      color: $white;
+    }
   }
 }
 </style>

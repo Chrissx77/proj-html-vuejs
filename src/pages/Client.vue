@@ -34,7 +34,7 @@ export default {
     };
   },
   mounted() {
-    let elementclient = document.querySelector(".elementclient");
+    let elementclient = document.querySelector(".elementclienti");
     store.transformElement(elementclient);
   },
 };
@@ -45,7 +45,7 @@ export default {
     <!-- sezione clienti  -->
     <div class="clients">
       <div class="container-fluid">
-        <div class="row text-center elementclient">
+        <div class="row text-center elementclienti">
           <div class="col-12">
             <h5>Why Anidio studio</h5>
             <h1>We Love Our Clients</h1>

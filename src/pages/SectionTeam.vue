@@ -1,8 +1,10 @@
 <script>
+import { store } from "../store";
 export default {
   name: "SectionTeam",
   data() {
     return {
+      // array di persone del team
       cardTeam: [
         {
           image: "src/assets/team1.png",
@@ -28,17 +30,26 @@ export default {
           label: "Owner & Creative Director",
         },
       ],
+      store,
     };
+  },
+  mounted() {
+    // elemento presi dentro al documento
+    let elementoTeam = document.querySelector(".elementiteam");
+    // Chiamata alla funzione all'interno dell'oggetto
+    store.transformElement(elementoTeam);
   },
 };
 </script>
 
 <template>
   <section>
-    <div class="team">
+    <!-- section team inizio  -->
+    <div class="team py-5">
       <div class="containe-fluid">
-        <div class="row text-center elementclient">
-          <div class="col-12">
+        <div class="row text-center">
+          <!-- descrizione del team in generale  -->
+          <div class="col-12 elementiteam" style="height: 125px">
             <h5>Anidio Magic Team Member</h5>
             <h1>Let Us Animate Your Project</h1>
             <p>
@@ -46,22 +57,47 @@ export default {
               effective, award-winning animations
             </p>
           </div>
-          <div class="row text-center my-4">
+          <!-- inizio componenti del team -->
+          <div class="row text-center my-5">
             <div
-              class="col-12 col-md-6 col-lg-4 col-xl-3"
+              class="col-12 col-md-6 col-lg-4 col-xl-3 my-5"
               v-for="(card, i) in cardTeam"
               :key="i"
             >
               <div class="team-iesimo">
                 <img :src="card.image" alt="" />
-                <div class="my-3">
-                  <strong>
+                <div class="my-4">
+                  <h4>
                     {{ card.name }}
-                  </strong>
+                  </h4>
                 </div>
                 <p>
                   {{ card.label }}
                 </p>
+                <ul class="d-flex ps-0 justify-content-center">
+                  <!-- icone social -->
+                  <li>
+                    <a
+                      href="#"
+                      class="rounded-circle d-flex align-items-center justify-content-center"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="rounded-circle d-flex align-items-center justify-content-center"
+                      ><i class="fa-brands fa-x-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="rounded-circle d-flex align-items-center justify-content-center"
+                      ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -74,7 +110,7 @@ export default {
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
-
+// caratteristiche descrizione del team
 .team {
   @include contain;
 
@@ -84,8 +120,54 @@ export default {
   h5 {
     color: blue;
   }
+  // caratteristiche card
   .team-iesimo {
     background-color: #fff5f0;
+    padding: 10px 20px;
+    border-radius: 15px;
+
+    img {
+      width: 100%;
+      position: relative;
+      top: -70px;
+    }
+
+    li {
+      margin: 0px 10px;
+
+      a {
+        background-color: $white;
+        width: 40px;
+        height: 40px;
+      }
+      // over su icone social
+      a:hover {
+        background-color: $orange;
+        color: white;
+      }
+    }
+  }
+  // hover su card che traslata le immagini
+  .team-iesimo:hover img {
+    transform: translate(0px, 10px);
+  }
+}
+// caratteristiche riguardo  sezione sectionTeam
+.scompari {
+  display: none;
+}
+// transizione elementiteam al descizione
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: 2s;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

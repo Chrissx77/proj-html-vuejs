@@ -55,25 +55,25 @@ export default {
       ],
     };
   },
-  // mounted() {
-  //   // elemento presi dentro al documento
-  //   let elemento = document.querySelector(".descrizione");
-  //   // // altezza elemento singolo dove si attiverà la transizione
-  //   var elementRect = elemento.getBoundingClientRect();
-  //   console.log(elementRect);
-  //   elementRect.y -= 500;
-  //   // evento
-  //   window.addEventListener("scroll", function () {
-  //     // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
-  //     if (window.scrollY > elementRect.y) {
-  //       elemento.classList.remove("scompari");
-  //       elemento.classList.add("transizione-scroll");
-  //     } else {
-  //       // else la toglie a prescindere
-  //       elemento.classList.add("scompari");
-  //     }
-  //   });
-  // },
+  mounted() {
+    // elemento presi dentro al documento
+    let elemento = document.querySelector(".descrizione");
+    // // altezza elemento singolo dove si attiverà la transizione
+    var elementRect = elemento.getBoundingClientRect();
+    console.log(elementRect);
+    elementRect.y -= 500;
+    // evento
+    window.addEventListener("scroll", function () {
+      // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
+      if (window.scrollY > elementRect.y) {
+        elemento.classList.remove("scompari");
+        elemento.classList.add("transizione-scroll");
+      } else {
+        // else la toglie a prescindere
+        elemento.classList.add("scompari");
+      }
+    });
+  },
 };
 </script>
 
@@ -299,22 +299,22 @@ export default {
   }
 }
 // caratteristiche riguardo al title di seione facts
-// .scompari {
-//   display: none;
-// }
-// // transizione data al title
-// .transizione-scroll {
-//   transition: all 0.9s;
-//   animation-name: comparsa;
-//   animation-duration: 2s;
-// }
+.scompari {
+  display: none;
+}
+// transizione data al title
+.transizione-scroll {
+  transition: all 0.9s;
+  animation-name: comparsa;
+  animation-duration: 2s;
+}
 
-// @keyframes comparsa {
-//   0% {
-//     transform: translateY(-25px);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
+@keyframes comparsa {
+  0% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 </style>

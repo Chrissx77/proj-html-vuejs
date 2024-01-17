@@ -129,14 +129,14 @@ section {
   transform: rotate(4deg);
 }
 
-// caratteristiche riguardo  sezione facts
+// caratteristiche riguardo componente title
 .scompari {
   display: none;
 }
 // transizione data al title
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 2s;
+  animation-duration: $duration;
 }
 
 @keyframes comparsa {

@@ -137,7 +137,7 @@ export default {
     <div class="service">
       <div class="container-fluid py-4">
         <div class="row" style="height: 116px">
-          <div class="col-12 text-center descrizione ">
+          <div class="col-12 text-center descrizione">
             <h5>Our Service</h5>
             <h2>Animations, Bespoke and Beautiful</h2>
             <p>
@@ -269,7 +269,7 @@ export default {
     transform: rotate(0deg);
   }
 }
-
+// caratteristiche immagini al cambio pixel schermo 
 @media screen and (max-width: 991px) {
   .col-12 > .globo-img3,
   .img-persona {
@@ -295,14 +295,15 @@ export default {
     color: blue;
   }
 }
-// caratteristiche riguardo  sezione aboutus
+// fine sezione service
+// caratteristiche riguardo a componente descrizione
 .scompari {
   display: none;
 }
 // transizione data al descizione
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 @keyframes comparsa {

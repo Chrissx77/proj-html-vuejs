@@ -47,15 +47,17 @@ export default {
     <!-- section team inizio  -->
     <div class="team py-5">
       <div class="containe-fluid">
-        <div class="row text-center">
+        <div class="row text-center position-relative">
           <!-- descrizione del team in generale  -->
-          <div class="col-12 elementiteam" style="height: 125px">
-            <h5>Anidio Magic Team Member</h5>
-            <h1>Let Us Animate Your Project</h1>
-            <p>
-              We create new worlds!Let’s collaborate and create engaging,
-              effective, award-winning animations
-            </p>
+          <div class="col-12" style="height: 125px">
+            <div class="elementiteam">
+              <h5>Anidio Magic Team Member</h5>
+              <h1>Let Us Animate Your Project</h1>
+              <p>
+                We create new worlds!Let’s collaborate and create engaging,
+                effective, award-winning animations
+              </p>
+            </div>
           </div>
           <!-- inizio componenti del team -->
           <div class="row text-center my-5">
@@ -76,21 +78,21 @@ export default {
                 </p>
                 <ul class="d-flex ps-0 justify-content-center">
                   <!-- icone social -->
-                  <li>
+                  <li class="mx-3">
                     <a
                       href="#"
                       class="rounded-circle d-flex align-items-center justify-content-center"
                       ><i class="fa-brands fa-instagram"></i
                     ></a>
                   </li>
-                  <li>
+                  <li class="mx-3">
                     <a
                       href="#"
                       class="rounded-circle d-flex align-items-center justify-content-center"
                       ><i class="fa-brands fa-x-twitter"></i
                     ></a>
                   </li>
-                  <li>
+                  <li class="mx-3">
                     <a
                       href="#"
                       class="rounded-circle d-flex align-items-center justify-content-center"
@@ -100,6 +102,12 @@ export default {
                 </ul>
               </div>
             </div>
+          </div>
+          <div class="planet-img1">
+            <img src="../assets/shape.png" alt="#" />
+          </div>
+          <div class="planet-img2">
+            <img src="../assets/shape2.png" alt="#" />
           </div>
         </div>
       </div>
@@ -133,8 +141,6 @@ export default {
     }
 
     li {
-      margin: 0px 10px;
-
       a {
         background-color: $white;
         width: 40px;
@@ -143,8 +149,36 @@ export default {
       // over su icone social
       a:hover {
         background-color: $orange;
-        color: white;
+        color: $white;
       }
+    }
+  }
+  // immagini pianeti di sottofondo
+  .planet-img1 {
+    position: absolute;
+    max-width: 750px;
+    z-index: -2;
+    left: -60px;
+    animation: zoominside 4s linear infinite;
+    animation-delay: 0.8s;
+    // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
+    animation-direction: alternate;
+    img {
+      width: 100%;
+    }
+  }
+
+  .planet-img2 {
+    position: absolute;
+    max-width: 750px;
+    right: 0px;
+    z-index: -1;
+    animation: zoomasseX 4s linear infinite;
+    animation-delay: 0.8s;
+    // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
+    animation-direction: alternate;
+    img {
+      width: 100%;
     }
   }
   // hover su card che traslata le immagini
@@ -152,14 +186,14 @@ export default {
     transform: translate(0px, 10px);
   }
 }
-// caratteristiche riguardo  sezione sectionTeam
+// caratteristiche riguardo componente elementiteam
 .scompari {
   display: none;
 }
 // transizione elementiteam al descizione
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 2s;
+  animation-duration: $duration;
 }
 
 @keyframes comparsa {
@@ -168,6 +202,23 @@ export default {
   }
   100% {
     transform: translateY(0);
+  }
+}
+// animazione pianeti
+@keyframes zoominside {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes zoomasseX {
+  100% {
+    // trasla sull asse delle x
+    transform: translateX(50px);
   }
 }
 </style>

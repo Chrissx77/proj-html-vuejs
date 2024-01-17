@@ -123,14 +123,14 @@ export default {
   }
 }
 
-// caratteristiche riguardo a sezione animation
+// caratteristiche riguardo a componente description-animation
 .scompari {
   display: none;
 }
 // transizione data al description-animation
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 2s;
+  animation-duration: $duration;
 }
 
 @keyframes comparsa {

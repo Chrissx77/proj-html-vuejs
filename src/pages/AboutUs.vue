@@ -292,7 +292,7 @@ export default {
   }
 }
 // fine sezione service
-.red {
-  background-color: red;
-}
+// .red {
+//   background-color: red;
+// }
 </style>

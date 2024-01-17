@@ -5,6 +5,7 @@ import SectionTeam from './SectionTeam.vue';
 import Client from './Client.vue';
 import Jumbotron from './Jumbotron.vue';
 import FeaturedProductions from './FeaturedProductions.vue';
+import OurProcess from './OurProcess.vue';
 
 
 
@@ -18,6 +19,7 @@ export default {
     Client,
     Jumbotron,
     FeaturedProductions,
+    OurProcess,
   }
   
 };
@@ -28,6 +30,7 @@ export default {
   <LoveAnimation/>
   <Facts/>
   <FeaturedProductions/>
+  <OurProcess/>
   <SectionTeam/>
   <Client/>
 </template>

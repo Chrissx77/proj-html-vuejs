@@ -61,7 +61,8 @@ export default {
     // // altezza elemento singolo dove si attiverà la transizione
     var elementRect = elemento.getBoundingClientRect();
     console.log(elementRect);
-    elementRect.y -= 500;
+    // valore per farlo comparire prima
+    elementRect.y -= 400;
     // evento
     window.addEventListener("scroll", function () {
       // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
@@ -139,8 +140,8 @@ export default {
     <!-- caratteristiche della sezione  -->
     <div class="service">
       <div class="container-fluid py-4">
-        <div class="row descrizione">
-          <div class="col-12 text-center">
+        <div class="row" style="height: 116px">
+          <div class="col-12 text-center descrizione">
             <h5>Our Service</h5>
             <h2>Animations, Bespoke and Beautiful</h2>
             <p>

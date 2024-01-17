@@ -133,7 +133,6 @@ export default {
   top: 0;
   width: 100%;
   z-index: 999;
-  transition: all 0.9s;
   box-shadow: 0px -31px 32px 9px #234dd4;
   background-color: rgb(38, 2, 98);
   animation-name: comparsa;

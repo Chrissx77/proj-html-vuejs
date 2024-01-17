@@ -196,24 +196,26 @@ export default {
       ],
     };
   },
-  // mounted() {
-  //   // elemento presi dentro al documento
-  //   let elementoFact = document.querySelector(".title");
-  //   // // altezza elemento singolo dove si attiverà la transizione
-  //   var elementRect = elementoFact.getBoundingClientRect();
-  //   elementRect -= 500;
-  //   // evento
-  //   window.addEventListener("scroll", function () {
-  //     // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
-  //     if (window.scrollY > elementRect.y) {
-  //       elementoFact.classList.remove("scompari");
-  //       elementoFact.classList.add("transizione-scroll");
-  //     } else {
-  //       // else la toglie a prescindere
-  //       elementoFact.classList.add("scompari");
-  //     }
-  //   });
-  // },
+  mounted() {
+    // elemento presi dentro al documento
+    let ElementoFacts = document.querySelector(".title");
+    // // altezza ElementoFacts singolo dove si attiverà la transizione
+    var elementRect = ElementoFacts.getBoundingClientRect();
+    console.log(elementRect);
+        // valore per farlo comparire prima
+    elementRect.y -= 500;
+    // evento
+    window.addEventListener("scroll", function () {
+      // quando i px della  finestra sono di piu rispetto al posizionamento dell ElementoFacts rimuove la classe scompari e aggiunge la transizione
+      if (window.scrollY > elementRect.y) {
+        ElementoFacts.classList.remove("scompari");
+        ElementoFacts.classList.add("transizione-scroll");
+      } else {
+        // else la toglie a prescindere
+        ElementoFacts.classList.add("scompari");
+      }
+    });
+  },
 };
 </script>
 
@@ -227,8 +229,8 @@ export default {
     </div>
     <div class="container-fluid position-relative">
       <div class="row">
-        <div class="title">
-          <h1 class="text-center text-white">audio quick facts</h1>
+        <div style="height: 110px">
+          <h1 class="text-center text-white title">audio quick facts</h1>
         </div>
         <div
           class="col-12 col-sm-6 col-xl-4 col-xxl-3 text-center"
@@ -308,23 +310,22 @@ section {
   transform: rotate(4deg);
 }
 
-// // caratteristiche riguardo al title di seione facts
-// .scompari {
-//   display: none;
-// }
-// // transizione data al title
-// .transizione-scroll {
-//   transition: all 0.9s;
-//   animation-name: comparsa;
-//   animation-duration: 2s;
-// }
+// caratteristiche riguardo al title di seione facts
+.scompari {
+  display: none;
+}
+// transizione data al title
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: 2s;
+}
 
-// @keyframes comparsa {
-//   0% {
-//     transform: translateY(-25px);
-//   }
-//   100% {
-//     transform: translateY(0);
-//   }
-// }
+@keyframes comparsa {
+  0% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 </style>

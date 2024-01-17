@@ -76,6 +76,9 @@ export default {
   .banner {
     position: absolute;
     bottom: 0;
+    img{
+      width: 100%;
+    }
   }
 
   .wrap {

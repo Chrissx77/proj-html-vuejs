@@ -1,12 +1,17 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import { store } from "./store";
 
 export default {
   components: {
     Header,
     Footer,
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 984185a5398bbf9342c3da06a2d2f177c126f62e
 };
 </script>
 

@@ -4,6 +4,7 @@ import Facts from "./Facts.vue";
 import SectionTeam from "./SectionTeam.vue";
 import Client from "./Client.vue";
 import { store } from "../store";
+import Loading from "./Loading.vue";
 
 export default {
   name: "AboutUs",
@@ -12,6 +13,7 @@ export default {
     Facts,
     SectionTeam,
     Client,
+    Loading
   },
   data() {
     return {
@@ -55,6 +57,7 @@ export default {
         },
       ],
       store,
+      isLoading: true,
     };
   },
   mounted() {
@@ -62,11 +65,16 @@ export default {
     let elemento = document.querySelector(".descrizione");
     // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elemento);
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500)
   },
 };
 </script>
 
 <template>
+  <Loading v-if="isLoading" />
   <!-- inizio prima sezione jumbotron -->
   <section class="jumbotron-bg position-relative d-flex">
     <div class="row">

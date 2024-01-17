@@ -31,14 +31,9 @@ export default {
   mounted() {
     // elemento presi dentro al documento
     let ElementoFacts = document.querySelector(".title");
-    // // altezza ElementoFacts singolo dove si attiverà la transizione
-    var elementRect = ElementoFacts.getBoundingClientRect();
-    console.log(elementRect);
-    // valore per farlo comparire prima
-    elementRect.y -= 500;
     // evento
     // Chiamata alla funzione all'interno dell'oggetto
-    store.saluta(elementRect.y, ElementoFacts);
+    store.saluta( ElementoFacts);
   },
 };
 </script>
@@ -146,7 +141,7 @@ section {
 
 @keyframes comparsa {
   0% {
-    transform: translateY(-25px);
+    transform: translateY(-30px);
   }
   100% {
     transform: translateY(0);

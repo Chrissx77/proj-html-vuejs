@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "Client",
   data() {
@@ -29,7 +30,12 @@ export default {
           image: "src/assets/sponsor6.png",
         },
       ],
+      store,
     };
+  },
+  mounted() {
+    let elementclient = document.querySelector(".elementclient");
+    store.saluta(elementclient);
   },
 };
 </script>
@@ -39,7 +45,7 @@ export default {
     <!-- sezione clienti  -->
     <div class="clients">
       <div class="container-fluid">
-        <div class="row text-center">
+        <div class="row text-center elementclient">
           <h5>Why Anidio studio</h5>
           <h1>We Love Our Clients</h1>
           <p>
@@ -74,6 +80,24 @@ export default {
   }
   h5 {
     color: blue;
+  }
+}
+// caratteristiche riguardo al title di seione facts
+.scompari {
+  display: none;
+}
+// transizione data al title
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: 3s;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

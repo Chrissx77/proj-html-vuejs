@@ -97,9 +97,8 @@ export default {
   position: relative;
   margin-top: 50px;
 }
-
-.wrap-{
-  widows: auto;
+.shape- img{
+  width: 100%;
 }
 .content__text h3{
   width: 400px;

@@ -32,20 +32,20 @@ export default {
 <template>
   <section>
     <div>
-      <img src="../assets/shape-top.png" alt="" />
+      <img src="../assets/shape-top.png" alt="" class="onde" />
     </div>
     <div class="globe-img">
       <img src="../assets/globe.png" alt="" />
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
       <div class="row">
         <h1 class="text-center text-white">audio quick facts</h1>
         <div
-          class="col-6 col-lg-4 col-xl-3 text-center"
+          class="col-12 col-sm-6 col-xl-4 col-xxl-3 text-center"
           v-for="(card, i) in cardFacts"
           :key="i"
         >
-          <div class="cards my-2 py-4">
+          <div class="cards my-2 py-4 border border-white">
             <div class="text-white">
               {{ card.number }} <i class="fa-solid fa-plus text-white"></i>
             </div>
@@ -55,7 +55,7 @@ export default {
       </div>
     </div>
     <div>
-      <img src="../assets/shape-bottom.png" alt="" />
+      <img src="../assets/shape-bottom.png" alt="" class="onde" />
     </div>
   </section>
 </template>
@@ -67,6 +67,11 @@ section {
   background-image: url(../assets/counter-bg.png);
   margin-top: 200px;
   position: relative;
+
+  .onde {
+    width: 100%;
+    display: block;
+  }
 
   .globe-img {
     position: absolute;
@@ -83,12 +88,8 @@ section {
   .container-fluid {
     @include contain;
     padding: 100px 0;
-
-    h1 {
-      z-index: 100;
-    }
+    z-index: 100;
     .cards {
-      border: 1px solid white;
       border-radius: 10px;
       div {
         font-size: 50px;
@@ -99,10 +100,14 @@ section {
     }
   }
 }
-
+// animazione pianeta sottofondo
 @keyframes rotazione {
   0% {
     transform: translate(-50%, -50%) rotate(180deg);
   }
+}
+// caratteristiche over sulle cardn
+.cards:hover {
+  transform: rotate(4deg);
 }
 </style>

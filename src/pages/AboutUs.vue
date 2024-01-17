@@ -12,6 +12,61 @@ export default {
     SectionTeam,
     Client,
   },
+  data() {
+    return {
+      // array con dentro  card dei servizzi della pagina/ azienda
+      cards: [
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process4.png",
+          title: "Motion Graphics",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process5.png",
+          title: "Character Design",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "src/assets/process1.png",
+          title: "Storyboards",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process6.png",
+          title: "Animatics",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process7.png",
+          title: "Film and TV",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "src/assets/process1.png",
+          title: "Script writing",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+      ],
+    };
+  },
+  mounted() {
+    // elementi presi dentro al documento
+    let elemento = document.querySelector(".service");
+    // altezza elemento singolo dove si attiverà la transizione
+    var elementRect = elemento.getBoundingClientRect();
+    // evento
+    window.addEventListener("scroll", function () {
+      if (elementRect.y < window.scrollY) {
+        elemento.classList.add("red");
+      }
+    });
+  },
 };
 </script>
 
@@ -73,6 +128,40 @@ export default {
   </section>
   <LoveAnimation class="pt-0 pb-4" />
   <Facts />
+  <section>
+    <!-- caratteristiche della sezione  -->
+    <div class="service">
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h5>Our Service</h5>
+            <h2>Animations, Bespoke and Beautiful</h2>
+            <p>
+              With the magic of imagination we are able to tell stories, animate
+              adventures, create art,
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <!-- div contenente tutte le card dell'array  -->
+          <div
+            class="col-12 col-md-6 col-lg-4 text-center my-4"
+            v-for="(card, i) in cards"
+            :key="i"
+          >
+            <div class="my-2 py-3 shadow border rounded" style="height: 100%">
+              <a href="#"> <img :src="card.img" alt="" /></a>
+              <a href="#"
+                ><h4>{{ card.title }}</h4>
+              </a>
+
+              <p>{{ card.paragrafo }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <SectionTeam />
   <Client />
 </template>
@@ -106,6 +195,7 @@ export default {
   // caratteristiche e posizionamento di quasi tutte le immagini dentro alla sezione
   .onde {
     bottom: 0px;
+    width: 100%;
   }
 
   .img-persona {
@@ -189,4 +279,20 @@ export default {
   }
 }
 // fine sezione jumbotron
+// inizio sezione service
+.service {
+  @include contain;
+  // colore del testo
+  a,
+  h2 {
+    color: $darkPurple;
+  }
+  h5 {
+    color: blue;
+  }
+}
+// fine sezione service
+.red {
+  background-color: red;
+}
 </style>

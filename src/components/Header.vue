@@ -1,6 +1,19 @@
 <script>
 export default {
   name: "Header",
+  mounted() {
+    // elementi presi dentro al documento
+    let elemento = document.querySelector(".barra-ricerca");
+    // // altezza elemento singolo dove si attiverà la transizione
+    // evento
+    window.addEventListener("scroll", function () {
+      if (250 < window.scrollY) {
+        elemento.classList.add("transizione-scroll");
+      } else {
+        elemento.classList.remove("transizione-scroll");
+      }
+    });
+  },
 };
 </script>
 
@@ -25,7 +38,7 @@ export default {
           <span class="text-white"><i class="fa-solid fa-bars"></i></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end py-2"
+          class="collapse navbar-collapse justify-content-end py-2 rounded"
           id="navbarNavDropdown"
         >
           <!-- ul per cambiare pagine  -->
@@ -61,9 +74,9 @@ export default {
 // caratteristiche contenitore dove c'è nav bar
 .barra-ricerca {
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  background-color: rgb(38, 2, 98);
+  background-color: transparent;
   // caratteristiche navbar
   nav {
     @include contain;
@@ -75,16 +88,17 @@ export default {
     #citazione {
       display: inline-block;
       a {
+        color: black;
         padding: 5px;
-        background-color: pink;
+        background-color: $pink;
         border-radius: 15px;
-        border: 1px solid white;
+        border: 1px solid $white;
       }
     }
     // caratteristiche hover
     #citazione:hover a {
-      background-color: #260458;
-      color: white;
+      background-color: $darkPurple;
+      color: $white;
     }
   }
   // caratteristiche hover li dentro alla lista delle pagine
@@ -96,7 +110,7 @@ export default {
 // caratteristiche al cambiare della larghezza shermo
 @media screen and (max-width: 991px) {
   #navbarNavDropdown {
-    background-color: #260458;
+    background-color: $darkPurple;
 
     li {
       border: 1px solid $white;
@@ -113,7 +127,25 @@ export default {
   }
 }
 
-.red {
-  background-color: red;
+// classe aggiunta a header
+.transizione-scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.9s;
+  box-shadow: 0px -31px 32px 9px #234dd4;
+  background-color: rgb(38, 2, 98);
+  animation-name: comparsa;
+  animation-duration: 1s;
+}
+// animazione ggiunta alla classe header allo scroll
+@keyframes comparsa {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 </style>

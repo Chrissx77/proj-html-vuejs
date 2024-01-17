@@ -17,14 +17,11 @@ export default {
       <button class="btn-portfolio">Portfolio</button>
       <div class="thumb">
         <div>
-          <img src="../assets/middle.png" alt="">
-          <i class="fa-solid fa-circle-play" style="color: #a616ea;"></i>
+          <img src="../assets/middle.png" alt="" />
+          <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
         </div>
       </div>
-      
     </div>
-
-    
 
     <div class="starsLeft">
       <img src="../assets/dots-left.png" alt="" srcset="" />
@@ -55,16 +52,14 @@ export default {
     </div>
 
     <div class="banner">
-      <img src="../assets/bottom-shape.png" alt="" srcset="">
+      <img src="../assets/bottom-shape.png" alt="" srcset="" />
     </div>
   </section>
-  
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
-
 
 .hero {
   padding-top: 150px 0px;
@@ -78,7 +73,7 @@ export default {
   align-items: center;
   position: relative;
 
-  .banner{
+  .banner {
     position: absolute;
     bottom: 0;
   }
@@ -117,28 +112,24 @@ export default {
       }
     }
 
-    .thumb{
+    .thumb {
       z-index: 90;
       position: absolute;
-      div{
+      div {
         position: relative;
-        img{
+        img {
           padding: 50px 0;
           width: 100%;
         }
-        i{
+        i {
           position: absolute;
           left: 44%;
           top: 44%;
           font-size: 3rem;
           background-color: white;
           border-radius: 50%;
-
         }
       }
-      
-      
-
     }
   }
 

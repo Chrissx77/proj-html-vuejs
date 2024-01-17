@@ -44,4 +44,18 @@ export default {
 .ritorno:hover {
   background-color: blue;
 }
+// caratteristihc epr la scroll bar
+::-webkit-scrollbar {
+  width: 10px;
+}
+// caratteristiche per il dentro della scroll bar
+::-webkit-scrollbar-thumb {
+  background: #751db3;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
 </style>

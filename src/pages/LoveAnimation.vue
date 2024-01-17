@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "LoveAnimation",
 
@@ -24,7 +25,14 @@ export default {
             "We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we'll drill deep to deliver above and beyond your expectations.",
         },
       ],
+      store,
     };
+  },
+  mounted() {
+    // elemento presi dentro al documento
+    let elementoAnimation = document.querySelector(".description-animation");
+    // Chiamata alla funzione all'interno dell'oggetto
+    store.transformElement(elementoAnimation);
   },
 };
 </script>
@@ -32,12 +40,18 @@ export default {
 <template>
   <div class="wrap">
     <div>
-      <p class="label">Our Love For Animation</p>
-      <h1 class="mainTitle">We're Storytelling Experts With Creative Smarts</h1>
-      <p class="paragraph">
-        Our culture inspires the creative and innovation spirit found throughout
-        our Studio. We breathe life into new ideas!
-      </p>
+      <div class="description-animation-contenitore">
+        <div class="description-animation">
+          <p class="label">Our Love For Animation</p>
+          <h1 class="mainTitle">
+            We're Storytelling Experts With Creative Smarts
+          </h1>
+          <p class="paragraph">
+            Our culture inspires the creative and innovation spirit found
+            throughout our Studio. We breathe life into new ideas!
+          </p>
+        </div>
+      </div>
       <div class="containerCards">
         <div class="card" v-for="(card, i) in cardLoveAnimation">
           <div>
@@ -70,7 +84,7 @@ export default {
   position: relative;
   left: 0;
 
-  .imageCard{
+  .imageCard {
     position: relative;
   }
 
@@ -80,7 +94,7 @@ export default {
     margin: 0 auto;
     gap: 20px;
     .containerCards {
-      div{
+      div {
         padding: 5px;
       }
       @include flex;
@@ -107,5 +121,28 @@ export default {
     top: 20%;
     width: 25%;
   }
+}
+
+// caratteristiche riguardo a sezione animation
+.scompari {
+  display: none;
+}
+// transizione data al description-animation
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: 2s;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.description-animation-contenitore {
+  min-height: 200px;
 }
 </style>

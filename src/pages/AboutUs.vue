@@ -61,7 +61,7 @@ export default {
     // elemento presi dentro al documento
     let elemento = document.querySelector(".descrizione");
     // Chiamata alla funzione all'interno dell'oggetto
-    store.saluta(elemento);
+    store.transformElement(elemento);
   },
 };
 </script>
@@ -129,7 +129,7 @@ export default {
     <div class="service">
       <div class="container-fluid py-4">
         <div class="row" style="height: 116px">
-          <div class="col-12 text-center descrizione">
+          <div class="col-12 text-center descrizione ">
             <h5>Our Service</h5>
             <h2>Animations, Bespoke and Beautiful</h2>
             <p>
@@ -287,11 +287,11 @@ export default {
     color: blue;
   }
 }
-// caratteristiche riguardo al title di seione facts
+// caratteristiche riguardo  sezione aboutus
 .scompari {
   display: none;
 }
-// transizione data al title
+// transizione data al descizione
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: 2s;

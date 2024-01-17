@@ -33,7 +33,7 @@ export default {
     let ElementoFacts = document.querySelector(".title");
     // evento
     // Chiamata alla funzione all'interno dell'oggetto
-    store.saluta( ElementoFacts);
+    store.transformElement( ElementoFacts);
   },
 };
 </script>
@@ -129,7 +129,7 @@ section {
   transform: rotate(4deg);
 }
 
-// caratteristiche riguardo al title di seione facts
+// caratteristiche riguardo  sezione facts
 .scompari {
   display: none;
 }

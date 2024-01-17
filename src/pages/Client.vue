@@ -35,7 +35,7 @@ export default {
   },
   mounted() {
     let elementclient = document.querySelector(".elementclient");
-    store.saluta(elementclient);
+    store.transformElement(elementclient);
   },
 };
 </script>
@@ -46,12 +46,14 @@ export default {
     <div class="clients">
       <div class="container-fluid">
         <div class="row text-center elementclient">
-          <h5>Why Anidio studio</h5>
-          <h1>We Love Our Clients</h1>
-          <p>
-            We are trusted throughout adland and have a wealth of
-            recommendations from start-ups to renowned global brands.
-          </p>
+          <div class="col-12">
+            <h5>Why Anidio studio</h5>
+            <h1>We Love Our Clients</h1>
+            <p>
+              We are trusted throughout adland and have a wealth of
+              recommendations from start-ups to renowned global brands.
+            </p>
+          </div>
         </div>
         <div class="row text-center my-4">
           <!-- cards contenenti i loghi dei clienti -->
@@ -75,18 +77,18 @@ export default {
 .clients {
   @include contain;
   // caratteristiche colore del testo
-  h2 {
-    color: darkPurple;
+  h1 {
+    color: $darkPurple;
   }
   h5 {
     color: blue;
   }
 }
-// caratteristiche riguardo al title di seione facts
+// caratteristiche riguardo  sezione client
 .scompari {
   display: none;
 }
-// transizione data al title
+// transizione data al elementclient
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: 3s;

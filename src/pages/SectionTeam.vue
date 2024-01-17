@@ -49,13 +49,15 @@ export default {
       <div class="containe-fluid">
         <div class="row text-center">
           <!-- descrizione del team in generale  -->
-          <div class="col-12 elementiteam" style="height: 125px">
-            <h5>Anidio Magic Team Member</h5>
-            <h1>Let Us Animate Your Project</h1>
-            <p>
-              We create new worlds!Let’s collaborate and create engaging,
-              effective, award-winning animations
-            </p>
+          <div class="col-12" style="height: 125px">
+            <div class="elementiteam">
+              <h5>Anidio Magic Team Member</h5>
+              <h1>Let Us Animate Your Project</h1>
+              <p>
+                We create new worlds!Let’s collaborate and create engaging,
+                effective, award-winning animations
+              </p>
+            </div>
           </div>
           <!-- inizio componenti del team -->
           <div class="row text-center my-5">

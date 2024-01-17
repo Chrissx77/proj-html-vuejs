@@ -13,10 +13,11 @@ export const store = reactive({
         // elementoSpecifico.classList.add("scompari")
         window.addEventListener("scroll", function () {
             // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
-            if (window.scrollY > elementRect.y) {
+            if (window.scrollY > elementRect.y || window.scrollY<120 ) {
                 elementoSpecifico.classList.remove("scompari");
               elementoSpecifico.classList.add("transizione-scroll");
-            } else{
+            }
+             else{
                 elementoSpecifico.classList.add("scompari")
             }
           });

@@ -1,10 +1,12 @@
 <script>
 import Loading from './Loading.vue';
+// import Header from '@/components/Header.vue';
 
 export default {
   name: "Contacts",
   components:{
     Loading,
+    // Header,
   },
 
   data(){
@@ -25,16 +27,17 @@ export default {
 
 <template>
   <Loading v-if="isLoading" />
+  <!-- <Header /> -->
   <div class="cont_titles">
     <h5>Contact Us</h5>
     <h1>How to Reach Us</h1>
     <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
   </div>
 
-  <!-- <div class="shape-">
-    <img src="../assets/shape-top.png" alt="##">
-  </div> -->
   <div class="big_cont">
+    <div class="shape-">
+      <img src="../assets/shape-top.png" alt="##">
+    </div>
 
 
     <div class="conteiner_wrapper">
@@ -74,7 +77,7 @@ export default {
               </div>
               <div class="estremi">
                 <h5>Phone:</h5>
-                <p>{406} 555-0120</p>
+                <p>[406] 555-0120</p>
               </div>
             </div>
           </div>
@@ -101,15 +104,46 @@ export default {
       </div>
 
       <div class="container_right">
+        <div class="wrapper_border">
 
+          <div class="wrapper_right">
+            <div class="wrapper_us">
+              <h1>Contact form</h1>
+              <p>Tell us your story and let's make it awesome</p>
+            </div>
+  
+            <div>
+              <div class="name">
+                <p>NAME</p>
+                <input type="text" placeholder="What's your name?">
+              </div>
+              <div class="email">
+                <p>EMAIL</p>
+                <input type="email" placeholder="What's your email?">
+              </div>
+              <div class="number">
+                <p>PHONE</p>
+                <input type="number" placeholder="your number?">
+              </div>
+              <div class="message">
+                <p>LEAVE A MESSAGE</p>
+                <textarea name="message" id="message" cols="10" rows="5" placeholder="Please type your message here..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="bottone">
+            <button type="submit"><b>Request a quote</b></button>
+          </div>
+
+        </div>
       </div>
     </div>
 
     
+    <div class="shape-">
+      <img src="../assets/shape-bottom.png" alt="##">
+    </div>
   </div>
-  <!-- <div class="shape-">
-    <img src="../assets/shape-bottom.png" alt="##">
-  </div> -->
 </template>
 
 <style lang="scss" scoped>
@@ -148,8 +182,9 @@ export default {
 .big_cont{
   margin: 0 auto;
   width: 85%;
-  height: 800px;
-  background-color: #ECE4FC;
+  height: fit-content;
+  background-color: #EBE5FF;
+  position: relative;
 }
 
 .conteiner_wrapper{
@@ -164,7 +199,7 @@ export default {
 
 .container_right{
   width: 50%;
-  height: 50px;
+  height:fit-content;
   // background-color: red;
 }
 
@@ -238,6 +273,75 @@ export default {
     i{
       color: $white;
     }
+  }
+}
+
+// stili input
+
+.name input,
+.email input,
+.number input,
+.message textarea{
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  border: solid 2px $lightGray;
+  outline: none;
+}
+
+.number, .email, .message, .name > p{
+  font-weight: 700;
+}
+
+.message textarea{
+  border-radius: 10px;
+  min-height: 200px;
+  width: 100%;
+  border: solid 2px $lightGray;
+  outline: none;
+}
+
+
+.name input,
+.email input,
+.number input{
+  margin-bottom: 25px;
+}
+
+.wrapper_us{
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.wrapper_right{
+  padding-inline: 15px;
+}
+
+.wrapper_border{
+  border-radius: 30px;
+  border: 1px solid $gray;
+  margin-right: 10px;
+  margin-top: 70px;
+  margin-bottom: 15px;
+  background-color: #F7F0FE;
+}
+// stile tasto
+
+.bottone{
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.bottone button{
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  background-color: $pink;
+  &:hover{
+    background-color: #fff;
+    border: solid 3px $pink;
   }
 }
 </style>

@@ -6,6 +6,7 @@ import Client from "./Client.vue";
 import Jumbotron from "./Jumbotron.vue";
 import FeaturedProductions from "./FeaturedProductions.vue";
 import OurProcess from "./OurProcess.vue";
+import Loading from "./Loading.vue";
 
 export default {
   name: "Home",
@@ -13,11 +14,27 @@ export default {
     Jumbotron,
     FeaturedProductions,
     OurProcess,
+    LoveAnimation,
+    Facts,
+    SectionTeam,
+    Client,
+    Loading
+  },
+  data() {
+    return {
+      isLoading: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   },
 };
 </script>
 
 <template>
+  <Loading v-if="isLoading" />
   <Jumbotron />
   <LoveAnimation />
   <Facts />

@@ -33,7 +33,7 @@ export default {
     let ElementoFacts = document.querySelector(".title");
     // evento
     // Chiamata alla funzione all'interno dell'oggetto
-    store.transformElement( ElementoFacts);
+    store.transformElement(ElementoFacts);
   },
 };
 </script>
@@ -49,10 +49,10 @@ export default {
     <div class="container-fluid position-relative">
       <div class="row">
         <div style="height: 110px">
-          <h1 class="text-center text-white title">audio quick facts</h1>
+          <h1 class="text-center text-white title">anidio quick facts</h1>
         </div>
         <div
-          class="col-12 col-sm-6 col-xl-4 col-xxl-3 text-center"
+          class="col-12 col-sm-6 col-lg-4 col-xxl-3 text-center"
           v-for="(card, i) in cardFacts"
           :key="i"
         >

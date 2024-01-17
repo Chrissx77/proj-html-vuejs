@@ -3,6 +3,7 @@ import LoveAnimation from "./LoveAnimation.vue";
 import Facts from "./Facts.vue";
 import SectionTeam from "./SectionTeam.vue";
 import Client from "./Client.vue";
+import { store } from "../store";
 
 export default {
   name: "AboutUs",
@@ -53,6 +54,7 @@ export default {
             "The best in the business, served to your audience’s eyeballs.",
         },
       ],
+      store,
     };
   },
   mounted() {
@@ -63,17 +65,9 @@ export default {
     console.log(elementRect);
     // valore per farlo comparire prima
     elementRect.y -= 400;
-    // evento
-    window.addEventListener("scroll", function () {
-      // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
-      if (window.scrollY > elementRect.y) {
-        elemento.classList.remove("scompari");
-        elemento.classList.add("transizione-scroll");
-      } else {
-        // else la toglie a prescindere
-        elemento.classList.add("scompari");
-      }
-    });
+
+    // Chiamata alla funzione all'interno dell'oggetto
+    store.saluta(elementRect.y,elemento);
   },
 };
 </script>

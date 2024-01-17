@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "Facts",
   data() {
@@ -24,6 +25,7 @@ export default {
           number: "12",
         },
       ],
+      store,
     };
   },
   mounted() {
@@ -32,19 +34,11 @@ export default {
     // // altezza ElementoFacts singolo dove si attiverà la transizione
     var elementRect = ElementoFacts.getBoundingClientRect();
     console.log(elementRect);
-        // valore per farlo comparire prima
+    // valore per farlo comparire prima
     elementRect.y -= 500;
     // evento
-    window.addEventListener("scroll", function () {
-      // quando i px della  finestra sono di piu rispetto al posizionamento dell ElementoFacts rimuove la classe scompari e aggiunge la transizione
-      if (window.scrollY > elementRect.y) {
-        ElementoFacts.classList.remove("scompari");
-        ElementoFacts.classList.add("transizione-scroll");
-      } else {
-        // else la toglie a prescindere
-        ElementoFacts.classList.add("scompari");
-      }
-    });
+    // Chiamata alla funzione all'interno dell'oggetto
+    store.saluta(elementRect.y, ElementoFacts);
   },
 };
 </script>

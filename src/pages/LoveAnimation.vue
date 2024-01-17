@@ -52,9 +52,10 @@ export default {
           </p>
         </div>
       </div>
+
       <div class="containerCards">
         <div class="card" v-for="(card, i) in cardLoveAnimation">
-          <div>
+          <div class="cardImage">
             <img :src="card.image" alt="" />
           </div>
           <div>
@@ -74,6 +75,25 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+@media screen and (max-width: 1200px) {
+  .imageLeft{
+    display: none;
+  }
+
+  .containerCards{
+    flex-direction: column;
+  }
+
+  .wrap{
+    div{
+      width: 90%;
+    }
+  }
+
+
+
+}
+
 .wrap {
   padding-top: 16%;
   @include flex;
@@ -83,6 +103,8 @@ export default {
   min-height: 700px;
   position: relative;
   left: 0;
+
+  
 
   .imageCard {
     position: relative;
@@ -98,7 +120,6 @@ export default {
         padding: 5px;
       }
       @include flex;
-      flex-basis: 33%;
     }
   }
 

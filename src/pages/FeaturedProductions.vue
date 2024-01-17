@@ -27,6 +27,7 @@ export default {
 </script>
 
 <template>
+
   <div class="wrap">
     <div>
       <p class="label">Our Works</p>
@@ -37,14 +38,28 @@ export default {
         contact with us.
       </p>
     </div>
+<<<<<<< HEAD
     <div class="cardContainer">
       <div v-for="card in cardProd" class="image">
         <img :src="card.image" alt="" />
         <div class="btn-play">
           <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+=======
+
+    <div class="container">
+      <div class="row gy-5">
+        <div v-for="card in cardProd" class="col-12 col-md-6 image">
+          <img :src="card.image" alt="" />
+          <div class="btn-play">
+            <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+          </div>
+>>>>>>> c0edb75aef84a09731daf9e0305bc2b38bb645ca
         </div>
       </div>
     </div>
+
+    
+
   </div>
 </template>
 
@@ -52,12 +67,36 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+.image{
+  position: relative;
+  .btn-play{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 4rem;
+    i{
+      background-color: $orange;
+      border-radius: 50%;
+    }
+  }
+}
+
+img{
+  width: 100%;
+  position: relative;
+ 
+}
+.box{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
 .wrap {
   min-height: 500px;
   text-align: center;
 
   div {
-    width: 50%;
     margin: 0 auto;
 
     .label {
@@ -72,6 +111,7 @@ export default {
       color: $purple;
     }
   }
+<<<<<<< HEAD
 
   .cardContainer {
     @include flex;
@@ -95,5 +135,7 @@ export default {
       }
     }
   }
+=======
+>>>>>>> c0edb75aef84a09731daf9e0305bc2b38bb645ca
 }
 </style>

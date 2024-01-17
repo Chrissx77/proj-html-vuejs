@@ -13,7 +13,7 @@ export const store = reactive({
         window.addEventListener("scroll", function () {
             // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione
             // messo seconda condizione se no scompariva il componente quando lo scroll era 0 essendo che l'animazione partiva quando lo scrol è maggiore dell'altezza di dove si trova l'elemento
-            console.log(this.window.scrollY);
+            // console.log(this.window.scrollY);
             if (window.scrollY > elementRect.y || window.scrollY < 120 ) {
                 elementoSpecifico.classList.remove("scompari");
               elementoSpecifico.classList.add("transizione-scroll");

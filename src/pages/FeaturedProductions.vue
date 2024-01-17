@@ -39,10 +39,10 @@ export default {
     </div>
     <div class="cardContainer">
       <div v-for="card in cardProd" class="image">
-          <img :src="card.image" alt="" />
-          <div class="btn-play">
-            <i class="fa-solid fa-circle-play" style="color: #fff;"></i>
-          </div>
+        <img :src="card.image" alt="" />
+        <div class="btn-play">
+          <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -77,23 +77,22 @@ export default {
     @include flex;
     flex-wrap: wrap;
     gap: 5px;
-    .image{
-        width: calc(100% / 2 - 5px);
-        position: relative;
-        img{
-            width: 100%;
-           
+    .image {
+      width: calc(100% / 2 - 5px);
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .btn-play {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        i {
+          font-size: 3rem;
+          background-color: $orange;
+          border-radius: 50%;
         }
-        .btn-play{
-            position: absolute;
-            top: 40%;
-            left: 25%;
-            i{
-                font-size: 3rem;
-                background-color: $orange;
-                border-radius: 50%;
-            }
-        }
+      }
     }
   }
 }

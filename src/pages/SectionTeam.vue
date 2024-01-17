@@ -5,29 +5,64 @@ export default {
   data() {
     return {
       // array di persone del team
+      // blu: "prova",
+      // d_block: "display",
+
       cardTeam: [
         {
           image: "src/assets/team1.png",
           name: "Don Woods",
           label: "Administrator",
+          dispay: false,
         },
 
         {
           image: "src/assets/team2.png",
           name: "Tomas Nash",
           label: "2d Animator & Compositor",
+          dispay: true,
         },
 
         {
           image: "src/assets/team2.png",
           name: "Hector Vargas",
           label: "Project Lead & Senior Animator",
+          dispay: true,
         },
 
         {
           image: "src/assets/team4.png",
           name: "Robert Coleman",
           label: "Owner & Creative Director",
+          dispay: true,
+        },
+
+        {
+          image: "src/assets/team1.png",
+          name: "Don Woods",
+          label: "Administrator",
+          dispay: true,
+        },
+
+        {
+          image: "src/assets/team2.png",
+          name: "Tomas Nash",
+          label: "2d Animator & Compositor",
+          dispay: false,
+        },
+
+        {
+          image: "src/assets/team2.png",
+          name: "Hector Vargas",
+          label: "Project Lead & Senior Animator",
+          dispay: false,
+        },
+
+        {
+          image: "src/assets/team4.png",
+          name: "Robert Coleman",
+          label: "Owner & Creative Director",
+          dispay: false,
         },
       ],
       store,
@@ -38,6 +73,23 @@ export default {
     let elementoTeam = document.querySelector(".elementiteam");
     // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elementoTeam);
+
+    // let number = 0;
+    // let number1 = 4;
+    // setInterval(() => {
+    //   number++;
+    //   number1++;
+    //   if (number1 > this.cardTeam.length - 1) {
+    //     number1 = 0;
+    //   }
+    //   if (number > this.cardTeam.length - 1) {
+    //     number = 0;
+    //   }
+
+    //   this.cardTeam[number].dispay = false;
+
+    //   this.cardTeam[number1].dispay = true;
+    // }, 3000);
   },
 };
 </script>
@@ -62,7 +114,7 @@ export default {
           <!-- inizio componenti del team -->
           <div class="row text-center my-5">
             <div
-              class="col-12 col-md-6 col-lg-4 col-xl-3 my-5"
+              class="col-12 col-md-6 col-lg-4 col-xl-3 my-5 display"
               v-for="(card, i) in cardTeam"
               :key="i"
             >
@@ -221,6 +273,31 @@ export default {
     transform: translateX(50px);
   }
 }
-
-// idisifhihf
 </style>
+
+<!--  :class="card.dispay ? blu : ''" -->
+
+<!-- // provaaa
+.prova {
+  display: none;
+}
+
+.display {
+  // animation: traslazione 3s linear infinite;
+
+  animation-name: traslazione;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes traslazione {
+  50% {
+    transform: translateX(+382px);
+  }
+  100% {
+    transform: translateX(+382px);
+  }
+} -->
+
+<!-- overflow-hidden al contenitore delle immagini -->

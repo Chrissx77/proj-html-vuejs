@@ -59,7 +59,7 @@ export default {
               </a>
             </li>
           </ul>
-          <span id="citazione">
+          <span id="citazione" class="ps-2">
             <a href=""> Get a Quote </a>
           </span>
         </div>

@@ -8,10 +8,6 @@ export default {
     Header,
     Footer,
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> 984185a5398bbf9342c3da06a2d2f177c126f62e
 };
 </script>
 

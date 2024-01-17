@@ -34,7 +34,9 @@ export default {
     };
   },
   mounted() {
+    // elemento presi dentro al documento
     let elementclient = document.querySelector(".elementclienti");
+    // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elementclient);
   },
 };
@@ -45,7 +47,7 @@ export default {
     <!-- sezione clienti  -->
     <div class="clients">
       <div class="container-fluid">
-        <div class="row " style="height: 125px;">
+        <div class="row" style="height: 125px">
           <div class="col-12 elementclienti text-center">
             <h5>Why Anidio studio</h5>
             <h1>We Love Our Clients</h1>
@@ -84,14 +86,14 @@ export default {
     color: blue;
   }
 }
-// caratteristiche riguardo  sezione client
+// caratteristiche riguardo  componente elementiclient
 .scompari {
   display: none;
 }
 // transizione data al elementclient
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 3s;
+  animation-duration: $duration;
 }
 
 @keyframes comparsa {

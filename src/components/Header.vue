@@ -50,7 +50,7 @@ export default {
             </li>
             <li class="nav-item my-1 ps-2">
               <a class="nav-link active" aria-current="page" href="">
-                <router-link :to="{ name: 'about' }"> about </router-link>
+                <router-link :to="{ name: 'about' }"> about us </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">

@@ -1,18 +1,15 @@
 <script>
-import LoveAnimation from './LoveAnimation.vue';
-import Facts from './Facts.vue';
-import SectionTeam from './SectionTeam.vue';
-import Client from './Client.vue';
-import Jumbotron from './Jumbotron.vue';
-import FeaturedProductions from './FeaturedProductions.vue';
-import OurProcess from './OurProcess.vue';
-
-
-
+import LoveAnimation from "./LoveAnimation.vue";
+import Facts from "./Facts.vue";
+import SectionTeam from "./SectionTeam.vue";
+import Client from "./Client.vue";
+import Jumbotron from "./Jumbotron.vue";
+import FeaturedProductions from "./FeaturedProductions.vue";
+import OurProcess from "./OurProcess.vue";
 
 export default {
   name: "Home",
-  components:{
+  components: {
     LoveAnimation,
     Facts,
     SectionTeam,
@@ -20,19 +17,19 @@ export default {
     Jumbotron,
     FeaturedProductions,
     OurProcess,
-  }
-  
+  },
 };
 </script>
 
 <template>
-  <Jumbotron/>
-  <LoveAnimation/>
-  <Facts/>
-  <FeaturedProductions/>
-  <OurProcess/>
-  <SectionTeam/>
-  <Client/>
+  <Jumbotron />
+  <LoveAnimation />
+  <Facts />
+  <FeaturedProductions />
+  <OurProcess />
+  <SectionTeam />
+  <Client />
+  
 </template>
 
 <style lang="scss" scoped>

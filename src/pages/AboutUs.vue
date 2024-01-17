@@ -304,7 +304,6 @@ export default {
 }
 // transizione data al title
 .transizione-scroll {
-  transition: all 0.9s;
   animation-name: comparsa;
   animation-duration: 2s;
 }

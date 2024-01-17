@@ -60,6 +60,15 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+@media screen and (max-width: 1200px) {
+  .wrap{
+    flex-direction: column;
+    .text{
+      width: 100%;
+    }
+  }
+}
+
 .wrap {
   padding: 10% 0;
   @include flex;

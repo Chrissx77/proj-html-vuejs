@@ -27,6 +27,7 @@ export default {
 </script>
 
 <template>
+
   <div class="wrap">
     <div>
       <p class="label">Our Works</p>
@@ -37,14 +38,20 @@ export default {
         contact with us.
       </p>
     </div>
-    <div class="cardContainer">
-      <div v-for="card in cardProd" class="image">
+
+    <div class="container">
+      <div class="row gy-5">
+        <div v-for="card in cardProd" class="col-12 col-md-6 image">
           <img :src="card.image" alt="" />
           <div class="btn-play">
-            <i class="fa-solid fa-circle-play" style="color: #fff;"></i>
+            <i class="fa-solid fa-circle-play" style="color: #fff"></i>
           </div>
+        </div>
       </div>
     </div>
+
+    
+
   </div>
 </template>
 
@@ -52,12 +59,36 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+.image{
+  position: relative;
+  .btn-play{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 4rem;
+    i{
+      background-color: $orange;
+      border-radius: 50%;
+    }
+  }
+}
+
+img{
+  width: 100%;
+  position: relative;
+ 
+}
+.box{
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
 .wrap {
   min-height: 500px;
   text-align: center;
 
   div {
-    width: 50%;
     margin: 0 auto;
 
     .label {
@@ -70,30 +101,6 @@ export default {
 
     .paragraph {
       color: $purple;
-    }
-  }
-
-  .cardContainer {
-    @include flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    .image{
-        width: calc(100% / 2 - 5px);
-        position: relative;
-        img{
-            width: 100%;
-           
-        }
-        .btn-play{
-            position: absolute;
-            top: 40%;
-            left: 25%;
-            i{
-                font-size: 3rem;
-                background-color: $orange;
-                border-radius: 50%;
-            }
-        }
     }
   }
 }

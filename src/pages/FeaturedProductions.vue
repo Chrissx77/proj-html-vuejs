@@ -38,22 +38,11 @@ export default {
         contact with us.
       </p>
     </div>
-<<<<<<< HEAD
     <div class="cardContainer">
       <div v-for="card in cardProd" class="image">
         <img :src="card.image" alt="" />
         <div class="btn-play">
           <i class="fa-solid fa-circle-play" style="color: #fff"></i>
-=======
-
-    <div class="container">
-      <div class="row gy-5">
-        <div v-for="card in cardProd" class="col-12 col-md-6 image">
-          <img :src="card.image" alt="" />
-          <div class="btn-play">
-            <i class="fa-solid fa-circle-play" style="color: #fff"></i>
-          </div>
->>>>>>> c0edb75aef84a09731daf9e0305bc2b38bb645ca
         </div>
       </div>
     </div>
@@ -111,7 +100,6 @@ img{
       color: $purple;
     }
   }
-<<<<<<< HEAD
 
   .cardContainer {
     @include flex;
@@ -135,7 +123,5 @@ img{
       }
     }
   }
-=======
->>>>>>> c0edb75aef84a09731daf9e0305bc2b38bb645ca
 }
 </style>

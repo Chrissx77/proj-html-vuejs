@@ -25,29 +25,60 @@ export default {
 };
 </script>
 
-<template>
-  <div class="wrap">
-    <div class="image">
-      <img src="../assets/process-thumb.png" alt="" />
-    </div>
-    <div class="text">
-      <p class="label">Our Process</p>
-      <h1 class="mainTitle">Our Process for Your Animation Production</h1>
-      <p class="paragraph">
-        We have an effective process for working on animation
-      </p>
-      <div>
-        <div class="cardsContainer">
-          <div class="card" v-for="card in cardProcess">
-            <div class="cardImage">
-              <img :src="card.image" alt="" srcset="" />
-            </div>
-            <div>
-              <h5>{{ card.title }}</h5>
-            </div>
+<!-- <p class="label">Our Process</p>
+        <h1 class="mainTitle">Our Process for Your Animation Production</h1>
+        <p class="paragraph">
+          We have an effective process for working on animation
+        </p>
+        <div>
+          <div class="cardsContainer">
+            <div class="card" v-for="card in cardProcess">
+              <div class="cardImage">
+                <img :src="card.image" alt="" srcset="" />
+              </div>
+              <div>
+                <h5>{{ card.title }}</h5>
+              </div>
 
-            <div>
-              {{ card.paragraph }}
+              <div>
+                {{ card.paragraph }}
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+<template>
+  <div class="container my-5">
+    <div class="row gy-5">
+      <div class="col-12 col-md-6 imageRocketWomen">
+        <div class="rocketWomen">
+          <img src="../assets/process-thumb.png" alt="" srcset="" />
+        </div>
+      </div>
+
+      <div class="text col-12 col-md-6">
+        <p class="label">Our Process</p>
+        <h1 class="mainTitle">Our Process for Your Animation Production</h1>
+        <p class="paragraph">
+          We have an effective process for working on animation
+        </p>
+
+        <div class="container">
+          <div class="row cardsContainer">
+            <div
+              class=" cardBox col-12 col-md-6 " v-for="card in cardProcess">
+              <div class="card">
+                <div class="cardImage">
+                  <img :src="card.image" alt="" srcset="" />
+                </div>
+                <div>
+                  <h5>{{ card.title }}</h5>
+                </div>
+
+                <div>
+                  {{ card.paragraph }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,80 +91,34 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
-@media screen and (max-width: 1200px) {
-  .wrap{
-    flex-direction: column;
-    .text{
-      width: 100%;
-    }
+.rocketWomen {
+  img {
+    width: 100%;
   }
 }
 
-.wrap {
-  padding: 10% 0;
-  @include flex;
-  @include contain;
-  gap: 50px;
-  min-height: 500px;
-
-  .image {
-    img {
-      width: 700px;
-      &:hover {
-        animation: fly1 3s;
-      }
-    }
+@media screen and (max-width: 600px) {
+  .imageRocketWomen {
+    order: 5;
   }
 
-  @keyframes fly1 {
-    0% {
-      transform: translateX(0px);
-    }
-
-    50% {
-      transform: translateX(+15px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
+  .cardBox {
+    order: 1;
+    width: 60%;
+    margin: 10px auto;
   }
 
-  .text {
-    width: 30%;
-    @include flex;
-    flex-direction: column;
+  .cardsContainer{
+    display: flex;
     justify-content: center;
+    align-items: center;
 
-    .label {
-      color: $blue;
-      font-weight: bold;
-    }
-    .mainTitle {
-      color: $purple;
-    }
-
-    .paragraph {
-      color: $purple;
-    }
-
-    .cardsContainer {
-      gap: 5%;
-      @include flex;
-      .card {
-        border-radius: 10px;
-        border: 1px solid $lightGray;
-        div {
-          padding: 5px 0;
-        }
-        padding: 30px;
-        @include flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 100%;
-        }
-      }
-    }
   }
+}
+
+
+.cardBox {
+  text-align: center;
+  margin: 20px;
 }
 </style>

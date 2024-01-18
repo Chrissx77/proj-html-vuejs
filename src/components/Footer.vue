@@ -9,9 +9,9 @@ export default {
   },
   mounted() {
     // elemento presi dentro al documento
-    let containertips = document.querySelector(".containertips");
+    // let containertips = document.querySelector(".containertips");
 
-    store.transformElement(containertips);
+    // store.transformElement(containertips);
   },
 };
 </script>

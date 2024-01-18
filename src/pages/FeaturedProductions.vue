@@ -54,11 +54,13 @@ export default {
     </div>
     <div class="container" style="min-height: 900px">
       <div class="row gy-5">
-        <div v-for="card in cardProd" class="col-12 col-md-6 image my-2">
-          <img :src="card.image" alt="" />
-          <div class="btn-play">
-            <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+        <div v-for="card in cardProd" class="col-12 col-md-6 image my-4">
+          <div class="random">
+            <div class="btn-play">
+              <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+            </div>
           </div>
+          <img :src="card.image" alt="" />
         </div>
       </div>
     </div>
@@ -82,10 +84,6 @@ export default {
 .image {
   position: relative;
   .btn-play {
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    font-size: 4rem;
     i {
       background-color: $orange;
       border-radius: 50%;
@@ -147,7 +145,7 @@ img {
   }
 }
 
-button{
+button {
   border: none;
   padding: 5px 15px;
   border-radius: 20px;
@@ -155,11 +153,11 @@ button{
   border: 1px solid $lightGray;
   font-weight: bold;
 
-  &:hover{
+  &:hover {
     background-color: $lightGray;
   }
 
-  a{
+  a {
     color: black;
   }
 }
@@ -184,5 +182,45 @@ button{
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+// caratteristiche over su immagini
+.image:hover {
+  // incliinazione lungo l'asse delle y
+  transform: skewY(5deg);
+}
+
+image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.random {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(227, 228, 237);
+  width: 0%;
+  height: 0%;
+  background: rgba(56, 53, 196, 0.25);
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 9;
+  border-radius: 20px;
+}
+
+/* Aggiungi una regola CSS quando l'utente fa l'hover sull'elemento */
+.image:hover .random {
+  height: 100%;
+  width: 96.5%; /* Cambia la larghezza a 100% durante l'hover */
+}
+
+.random .btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
 }
 </style>

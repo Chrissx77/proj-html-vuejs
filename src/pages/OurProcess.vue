@@ -120,6 +120,10 @@ export default {
   }
 }
 
+.card{
+  border-radius: 30px;
+}
+
 @media screen and (max-width: 600px) {
   .imageRocketWomen {
     order: 5;

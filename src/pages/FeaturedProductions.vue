@@ -62,6 +62,16 @@ export default {
         </div>
       </div>
     </div>
+
+    <div class="container my-2">
+      <div class="row">
+        <div class="col-12">
+          <button>
+            <small><a href="#">See Our Work</a></small>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -134,6 +144,23 @@ img {
         }
       }
     }
+  }
+}
+
+button{
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid $lightGray;
+  font-weight: bold;
+
+  &:hover{
+    background-color: $lightGray;
+  }
+
+  a{
+    color: black;
   }
 }
 

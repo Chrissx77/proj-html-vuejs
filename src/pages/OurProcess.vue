@@ -55,7 +55,7 @@ export default {
         <div class="container">
           <div class="row cardsContainer">
             <div class="cardBox col-12 col-md-6" v-for="card in cardProcess">
-              <div class="card p-4" style="height: 100%">
+              <div class="card p-4 my-2" style="height: 100%">
                 <div class="cardImage">
                   <img :src="card.image" alt="" srcset="" />
                 </div>
@@ -85,6 +85,41 @@ export default {
   }
 }
 
+.cardBox {
+  text-align: center;
+}
+
+.rocketWomen:hover {
+  transform:translate(5%);
+  transition: 1s;
+}
+
+.label{
+  color: $blue;
+  font-weight: bold;
+}
+
+.mainTitle{
+  color: $purple;
+}
+
+.paragraph{
+  color: $purple;
+}
+
+.card{
+  div{
+    margin: 5px;
+  }
+
+  .cardImage{
+    background-color: $lightGray ;
+    border-radius: 50%;
+    border: none;
+    padding: 50px 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .imageRocketWomen {
     order: 5;
@@ -102,8 +137,19 @@ export default {
   }
 }
 
-.cardBox {
-  text-align: center;
+
+
+@keyframes fly1 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(+20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 // caratteristiche riguardo  componente descriptionprocess
 .scompari {

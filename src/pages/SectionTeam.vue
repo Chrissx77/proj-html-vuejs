@@ -73,7 +73,7 @@ export default {
             >
               >
               <div class="team-iesimo">
-                <img :src="card.image" alt="" />
+                <img :src="card.image" alt="#"  class="position-relative"/>
                 <div class="my-4">
                   <h4>
                     {{ card.name }}
@@ -109,10 +109,11 @@ export default {
               </div>
             </div>
           </div>
-          <div class="planet-img1">
+          <!-- immagini sfondo di sezione -->
+          <div class="planet-img1 position-absolute">
             <img src="../assets/shape.png" alt="#" />
           </div>
-          <div class="planet-img2">
+          <div class="planet-img2 position-absolute">
             <img src="../assets/shape2.png" alt="#" />
           </div>
         </div>
@@ -142,7 +143,6 @@ export default {
 
     img {
       width: 100%;
-      position: relative;
       top: -70px;
     }
 
@@ -161,7 +161,6 @@ export default {
   }
   // immagini pianeti di sottofondo
   .planet-img1 {
-    position: absolute;
     max-width: 750px;
     z-index: -2;
     left: -60px;
@@ -175,7 +174,6 @@ export default {
   }
 
   .planet-img2 {
-    position: absolute;
     max-width: 750px;
     right: 0px;
     z-index: -1;

@@ -39,11 +39,11 @@ export default {
 </script>
 
 <template>
-  <section>
+  <section class="position-relative">
     <div>
       <img src="../assets/shape-top.png" alt="#" class="onde" />
     </div>
-    <div class="globe-img">
+    <div class="globe-img position-absolute">
       <img src="../assets/globe.png" alt="#" />
     </div>
     <div class="container-fluid position-relative">
@@ -77,7 +77,6 @@ export default {
 section {
   background-image: url(../assets/counter-bg.png);
   margin-top: 200px;
-  position: relative;
 
   .onde {
     width: 100%;
@@ -85,7 +84,6 @@ section {
   }
 
   .globe-img {
-    position: absolute;
     max-width: 350px;
     top: 50%;
     left: 50%;

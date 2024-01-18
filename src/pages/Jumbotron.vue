@@ -18,7 +18,13 @@ export default {
       <div class="thumb">
         <div>
           <img src="../assets/middle.png" alt="" />
-          <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
+          <a href="" class="play-tag">
+            <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
+          </a>
+          <!-- crearo il secondo tag i cosi che faccia da sfondo fisso -->
+          <a href="" class="play-tag-riflesso">
+            <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -126,8 +132,9 @@ export default {
         }
         i {
           position: absolute;
-          left: 44%;
-          top: 44%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
           font-size: 3rem;
           background-color: white;
           border-radius: 50%;
@@ -233,5 +240,33 @@ export default {
       transform: rotate(0deg);
     }
   }
+}
+
+// animazione display play
+.play-tag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a616ea;
+  animation: impulso 1.1s linear infinite, impulso 1.2s linear infinite;
+  animation-delay: 0.4s;
+}
+// stessa animazione ma con durata diversa in modo da far sembrare che siano due
+@keyframes impulso {
+  100% {
+    transform: scale(2.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(3.1);
+    opacity: 0;
+  }
+}
+
+.play-tag-riflesso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 </style>

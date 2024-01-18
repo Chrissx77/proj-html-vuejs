@@ -56,9 +56,16 @@ export default {
       <div class="row gy-5">
         <div v-for="card in cardProd" class="col-12 col-md-6 image my-4">
           <div class="backcomparsa">
-            <div class="btn-play">
+            <a href="#" class="btn-play">
+              <i
+                class="fa-solid fa-circle-play play-item"
+                style="color: #fff"
+              ></i>
+            </a>
+            <!-- crearo il secondo tag i cosi che faccia da sfondo fisso -->
+            <a href="#" class="btn-play">
               <i class="fa-solid fa-circle-play" style="color: #fff"></i>
-            </div>
+            </a>
           </div>
           <img :src="card.image" alt="" />
         </div>
@@ -121,7 +128,7 @@ img {
     }
   }
 
-  .btn-play{
+  .btn-play {
     display: none;
   }
 
@@ -199,6 +206,7 @@ image {
   height: 100vh;
   position: relative;
 }
+// sottofondo nascosto
 .backcomparsa {
   position: absolute;
   top: 50%;
@@ -214,10 +222,10 @@ image {
   border-radius: 20px;
 }
 
-/* Aggiungi una regola CSS quando l'utente fa l'hover sull'elemento */
+// all'over della card compare backcomparsa
 .image:hover .backcomparsa {
   height: 100%;
-  width: 96.5%; /* Cambia la larghezza a 100% durante l'hover */
+  width: 96.5%;
 }
 
 .image:hover .btn-play {
@@ -230,5 +238,24 @@ image {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
+}
+
+// codice per far impulso del tag play
+.play-item {
+  animation: impulso 1.1s linear infinite;
+  animation-delay: 0.4s;
+  content: "";
+  display: block;
+}
+
+@keyframes impulso {
+  100% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 </style>

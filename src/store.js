@@ -6,7 +6,7 @@ export const store = reactive({
         transformElement: (elementoSpecifico) => {
         // altezza ElementoFacts singolo dove si attiverà la transizione viene messa in un oggetto
         var elementRect = elementoSpecifico.getBoundingClientRect();
-            elementRect.y -= 380;
+            elementRect.y -= 400;
        // console.log(elementRect);
  
         // parte con classe scompari 

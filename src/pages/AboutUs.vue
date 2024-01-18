@@ -315,7 +315,6 @@ export default {
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;
-  // position: relative;
 }
 
 @keyframes comparsa {

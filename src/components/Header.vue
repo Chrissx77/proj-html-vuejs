@@ -22,8 +22,8 @@ export default {
   <div class="barra-ricerca">
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent">
       <div class="container-fluid">
-        <a class="navbar-brand" href=""
-          ><img src="../assets/logo.png" alt=""
+        <a class="navbar-brand" href="#"
+          ><img src="../assets/logo.png" alt="#"
         /></a>
         <!-- bottone per fare drop down delle pagine disponibili -->
         <button
@@ -44,23 +44,23 @@ export default {
           <!-- ul per cambiare pagine  -->
           <ul class="navbar-nav p-2">
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link active" aria-current="page" href="">
+              <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'home' }"> home </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link active" aria-current="page" href="">
+              <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'about' }"> about us </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="#">
                 <router-link :to="{ name: 'contacts' }"> contacts </router-link>
               </a>
             </li>
           </ul>
           <span id="citazione" class="ps-2">
-            <a href=""> Get a Quote </a>
+            <a href="#" class="p-1 border border-white"> Get a Quote </a>
           </span>
         </div>
       </div>
@@ -86,13 +86,10 @@ export default {
     }
     // caratteristiche bottone citazioni
     #citazione {
-      display: inline-block;
       a {
         color: black;
-        padding: 5px;
         background-color: $pink;
         border-radius: 15px;
-        border: 1px solid $white;
       }
     }
     // caratteristiche hover

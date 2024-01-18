@@ -55,7 +55,7 @@ export default {
     <div class="container" style="min-height: 900px">
       <div class="row gy-5">
         <div v-for="card in cardProd" class="col-12 col-md-6 image my-4">
-          <div class="random">
+          <div class="backcomparsa">
             <div class="btn-play">
               <i class="fa-solid fa-circle-play" style="color: #fff"></i>
             </div>
@@ -199,7 +199,7 @@ image {
   height: 100vh;
   position: relative;
 }
-.random {
+.backcomparsa {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -215,7 +215,7 @@ image {
 }
 
 /* Aggiungi una regola CSS quando l'utente fa l'hover sull'elemento */
-.image:hover .random {
+.image:hover .backcomparsa {
   height: 100%;
   width: 96.5%; /* Cambia la larghezza a 100% durante l'hover */
 }
@@ -224,7 +224,7 @@ image {
   display: block;
 }
 
-.random .btn-play {
+.backcomparsa .btn-play {
   position: absolute;
   top: 50%;
   left: 50%;

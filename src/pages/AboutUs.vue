@@ -326,39 +326,3 @@ export default {
   }
 }
 </style>
-
-
-<!-- mounted() {
-  let descriptionproductions = document.querySelector(
-    ".descrizione-features"
-  );
-  store.transformElement(descriptionproductions);
-
-  let cardimage = document.querySelectorAll(".image");
-
-  for (let i = 0; i < this.cardProd.length; i++) {
-    store.transformElement(cardimage[i]);
-  }
-}, -->
-
-<!-- class="descrizione-features" style="min-height: 120px" -->
-
-<!-- // caratteristiche riguardo a componente descrizione-features
-.scompari {
-  display: none;
-}
-// transizione data al image
-.transizione-scroll {
-  animation-name: comparsa;
-  animation-duration: 3s;
-  // position: relative;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-35px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-} -->

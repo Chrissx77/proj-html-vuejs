@@ -13,7 +13,7 @@ export default {
     Facts,
     SectionTeam,
     Client,
-    Loading
+    Loading,
   },
   data() {
     return {
@@ -63,12 +63,19 @@ export default {
   mounted() {
     // elemento presi dentro al documento
     let elemento = document.querySelector(".descrizione");
-    // Chiamata alla funzione all'interno dell'oggetto
+
+    let cards = document.querySelectorAll(".card-service");
+
+    for (let i = 0; i < this.cards.length; i++) {
+      store.transformElement(cards[i]);
+    }
     store.transformElement(elemento);
+    // console.log(cards);
+    // Chiamata alla funzione all'interno dell'oggetto
 
     setTimeout(() => {
       this.isLoading = false;
-    }, 1500)
+    }, 1500);
   },
 };
 </script>
@@ -146,14 +153,17 @@ export default {
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" style="min-height: 530px">
           <!-- div contenente tutte le card dell'array  -->
           <div
             class="col-12 col-md-6 col-lg-4 text-center my-4"
             v-for="(card, i) in cards"
             :key="i"
           >
-            <div class="my-2 py-3 shadow border rounded" style="height: 100%">
+            <div
+              class="my-2 py-3 shadow border rounded card-service"
+              style="min-height: 200px"
+            >
               <a href="#"> <img :src="card.img" alt="" /></a>
               <a href="#"
                 ><h4>{{ card.title }}</h4>
@@ -269,7 +279,7 @@ export default {
     transform: rotate(0deg);
   }
 }
-// caratteristiche immagini al cambio pixel schermo 
+// caratteristiche immagini al cambio pixel schermo
 @media screen and (max-width: 991px) {
   .col-12 > .globo-img3,
   .img-persona {
@@ -304,14 +314,51 @@ export default {
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: 3s;
+  // position: relative;
 }
 
 @keyframes comparsa {
   0% {
-    transform: translateY(-30px);
+    transform: translateY(-35px);
   }
   100% {
     transform: translateY(0);
   }
 }
 </style>
+
+
+<!-- mounted() {
+  let descriptionproductions = document.querySelector(
+    ".descrizione-features"
+  );
+  store.transformElement(descriptionproductions);
+
+  let cardimage = document.querySelectorAll(".image");
+
+  for (let i = 0; i < this.cardProd.length; i++) {
+    store.transformElement(cardimage[i]);
+  }
+}, -->
+
+<!-- class="descrizione-features" style="min-height: 120px" -->
+
+<!-- // caratteristiche riguardo a componente descrizione-features
+.scompari {
+  display: none;
+}
+// transizione data al image
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: 3s;
+  // position: relative;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-35px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} -->

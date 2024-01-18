@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "FeaturedProductions",
 
@@ -21,13 +22,14 @@ export default {
           image: "src/assets/work4.png",
         },
       ],
+      store,
     };
   },
+  
 };
 </script>
 
 <template>
-
   <div class="wrap">
     <div>
       <p class="label">Our Works</p>
@@ -38,17 +40,16 @@ export default {
         contact with us.
       </p>
     </div>
-    <div class="cardContainer">
-      <div v-for="card in cardProd" class="image">
-        <img :src="card.image" alt="" />
-        <div class="btn-play">
-          <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+    <div class="container">
+      <div class="row gy-5">
+        <div v-for="card in cardProd" class="col-12 col-md-6 image">
+          <img :src="card.image" alt="" />
+          <div class="btn-play">
+            <i class="fa-solid fa-circle-play" style="color: #fff"></i>
+          </div>
         </div>
       </div>
     </div>
-
-    
-
   </div>
 </template>
 
@@ -56,26 +57,25 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
-.image{
+.image {
   position: relative;
-  .btn-play{
+  .btn-play {
     position: absolute;
     top: 40%;
     left: 45%;
     font-size: 4rem;
-    i{
+    i {
       background-color: $orange;
       border-radius: 50%;
     }
   }
 }
 
-img{
+img {
   width: 100%;
   position: relative;
- 
 }
-.box{
+.box {
   background-color: red;
   width: 100px;
   height: 100px;
@@ -124,4 +124,5 @@ img{
     }
   }
 }
+
 </style>

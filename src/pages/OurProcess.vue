@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "OurProcess",
   data() {
@@ -20,7 +21,14 @@ export default {
           num: "2",
         },
       ],
+      store,
     };
+  },
+  mounted() {
+    // elemento presi dentro al documento
+    let elementclient = document.querySelector(".descriptionprocess");
+    // Chiamata alla funzione all'interno dell'oggetto
+    store.transformElement(elementclient);
   },
 };
 </script>
@@ -34,11 +42,15 @@ export default {
       </div>
 
       <div class="text col-12 col-md-6">
-        <p class="label">Our Process</p>
-        <h1 class="mainTitle">Our Process for Your Animation Production</h1>
-        <p class="paragraph">
-          We have an effective process for working on animation
-        </p>
+        <div style="min-height: 160px">
+          <div class="descriptionprocess">
+            <p class="label">Our Process</p>
+            <h1 class="mainTitle">Our Process for Your Animation Production</h1>
+            <p class="paragraph">
+              We have an effective process for working on animation
+            </p>
+          </div>
+        </div>
 
         <div class="container">
           <div class="row cardsContainer">
@@ -92,5 +104,25 @@ export default {
 
 .cardBox {
   text-align: center;
+}
+// caratteristiche riguardo  componente descriptionprocess
+.scompari {
+  display: none;
+}
+// transizione data all testo della descirzione pagina
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: $duration;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>

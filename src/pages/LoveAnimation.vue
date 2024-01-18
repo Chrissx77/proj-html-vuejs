@@ -40,7 +40,7 @@ export default {
 <template>
   <div class="wrap my-5">
     <div>
-      <div class="description-animation-contenitore">
+      <div class="description-animation-contenitore" style="min-height: 200px">
         <div class="description-animation">
           <p class="label">Our Love For Animation</p>
           <h1 class="mainTitle">
@@ -152,13 +152,11 @@ export default {
 @keyframes comparsa {
   0% {
     transform: translateY(-30px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
-}
-
-.description-animation-contenitore {
-  min-height: 200px;
 }
 </style>

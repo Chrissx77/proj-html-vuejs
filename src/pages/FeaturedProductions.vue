@@ -29,6 +29,7 @@ export default {
     let descriptionproductions = document.querySelector(
       ".descrizione-features"
     );
+    // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(descriptionproductions);
 
     let cardimage = document.querySelectorAll(".image");
@@ -51,7 +52,7 @@ export default {
         contact with us.
       </p>
     </div>
-    <div class="container">
+    <div class="container" style="min-height: 900px">
       <div class="row gy-5">
         <div v-for="card in cardProd" class="col-12 col-md-6 image my-2">
           <img :src="card.image" alt="" />
@@ -62,7 +63,6 @@ export default {
       </div>
     </div>
   </div>
-  
 </template>
 
 <style lang="scss" scoped>
@@ -144,16 +144,18 @@ img {
 // transizione data al image
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 3s;
+  animation-duration: $duration;
   // position: relative;
 }
 
 @keyframes comparsa {
   0% {
     transform: translateY(-35px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>

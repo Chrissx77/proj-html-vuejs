@@ -93,15 +93,17 @@ export default {
 // transizione data al elementclient
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: $duration;
+  animation-duration: 4s;
 }
 
 @keyframes comparsa {
   0% {
     transform: translateY(-30px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>

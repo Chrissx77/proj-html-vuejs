@@ -69,6 +69,7 @@ export default {
     for (let i = 0; i < this.cards.length; i++) {
       store.transformElement(cards[i]);
     }
+    // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elemento);
     // console.log(cards);
     // Chiamata alla funzione all'interno dell'oggetto
@@ -313,16 +314,18 @@ export default {
 // transizione data al descizione
 .transizione-scroll {
   animation-name: comparsa;
-  animation-duration: 3s;
+  animation-duration: $duration;
   // position: relative;
 }
 
 @keyframes comparsa {
   0% {
     transform: translateY(-35px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>

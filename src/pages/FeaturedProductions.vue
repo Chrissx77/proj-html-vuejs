@@ -121,6 +121,10 @@ img {
     }
   }
 
+  .btn-play{
+    display: none;
+  }
+
   .cardContainer {
     @include flex;
     flex-wrap: wrap;
@@ -214,6 +218,10 @@ image {
 .image:hover .random {
   height: 100%;
   width: 96.5%; /* Cambia la larghezza a 100% durante l'hover */
+}
+
+.image:hover .btn-play {
+  display: block;
 }
 
 .random .btn-play {

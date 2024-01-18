@@ -20,13 +20,10 @@ export default {
       this.isLoading = false;
     }, 1500)
   },
-
-
 };
 </script>
 
 <template>
-  <Loading v-if="isLoading" />
   <!-- <Header /> -->
   <div class="cont_titles">
     <h5>Contact Us</h5>
@@ -144,11 +141,126 @@ export default {
       <img src="../assets/shape-bottom.png" alt="##">
     </div>
   </div>
+
+  <!-- creazione sezione (We’re Here to Help) -->
+
+  <div class="menu-container-help">
+    <div class="cont_titles">
+      <h5>We're Here to Help</h5>
+      <h1>Frequently Asked Questions</h1>
+      <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>How do i know what kind of video i need?</h2>
+      <div class="container_plus" onclick="toggleMenu()">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>How long will it take to create an animation video?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>How long do you need for the video creation process?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>Will I take part in the creation process?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>What type / format of animated video can I order?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>What if I don't like what you deliver?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+
+    <div class="contenitore_dropdown">
+      <h2>Do you currently have career openings?</h2>
+      <div class="container_plus">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+    </div>
+  </div>
+
+
+  <Loading v-if="isLoading" />
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
+
+// creazione sezione style (We’re Here to Help)
+
+// .menu-container-help{
+//   background-image: url(../assets/circle.png);
+//   background-size: cover;
+//   height: 100%;
+//   width: 100%;
+// }
+
+.contenitore_dropdown{
+  display: flex ;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding: 10px;
+  height: 70px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenitore_dropdown h2{
+  padding-right: 150px;
+  font-size: 25px;
+}
+.contenitore_dropdown div{
+  margin-right: 25px;
+}
+
+.container_plus{
+  border: solid 1px $purple;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // stili contenitore titoli
 .cont_titles {

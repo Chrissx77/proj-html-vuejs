@@ -8,7 +8,7 @@ export const store = reactive({
         var elementRect = elementoSpecifico.getBoundingClientRect();
             elementRect.y -= 380;
        // console.log(elementRect);
-       // valore per farlo comparire prima
+ 
         // parte con classe scompari 
         window.addEventListener("scroll", function () {
             // quando i px della  finestra sono di piu rispetto al posizionamento dell elemento rimuove la classe scompari e aggiunge la transizione

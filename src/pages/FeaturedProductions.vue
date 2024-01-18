@@ -25,7 +25,6 @@ export default {
       store,
     };
   },
-  
 };
 </script>
 
@@ -42,7 +41,7 @@ export default {
     </div>
     <div class="container">
       <div class="row gy-5">
-        <div v-for="card in cardProd" class="col-12 col-md-6 image">
+        <div v-for="card in cardProd" class="col-12 col-md-6 image my-2">
           <img :src="card.image" alt="" />
           <div class="btn-play">
             <i class="fa-solid fa-circle-play" style="color: #fff"></i>
@@ -124,5 +123,4 @@ img {
     }
   }
 }
-
 </style>

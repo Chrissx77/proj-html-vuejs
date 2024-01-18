@@ -10,6 +10,7 @@ export default {
   mounted() {
     // elemento presi dentro al documento
     let containertips = document.querySelector(".containertips");
+
     store.transformElement(containertips);
   },
 };
@@ -19,7 +20,7 @@ export default {
   <div class="footer">
     <div class="content">
       <div class="content__text">
-        <div class="shape-">
+        <div class="shape-img">
           <img src="../assets/shape-top.png" alt="##" />
         </div>
 
@@ -41,7 +42,7 @@ export default {
           </form>
         </div>
 
-        <div class="shape-">
+        <div class="shape-img">
           <img src="../assets/shape-bottom.png" alt="##" />
         </div>
       </div>
@@ -104,7 +105,7 @@ export default {
   position: relative;
   margin-top: 50px;
 }
-.shape- img {
+.shape-img img {
   width: 100%;
 }
 .content__text h3 {

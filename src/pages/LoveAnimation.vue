@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <div class="wrap">
+  <div class="wrap my-5">
     <div>
       <div class="description-animation-contenitore">
         <div class="description-animation">
@@ -53,7 +53,7 @@ export default {
         </div>
       </div>
 
-      <div class="containerCards">
+      <div class="containerCards my-5" style="min-height: 300px">
         <div class="card" v-for="(card, i) in cardLoveAnimation">
           <div class="cardImage">
             <img :src="card.image" alt="" />
@@ -76,22 +76,19 @@ export default {
 @use "../style/partials/mixins" as *;
 
 @media screen and (max-width: 1200px) {
-  .imageLeft{
+  .imageLeft {
     display: none;
   }
 
-  .containerCards{
+  .containerCards {
     flex-direction: column;
   }
 
-  .wrap{
-    div{
+  .wrap {
+    div {
       width: 90%;
     }
   }
-
-
-
 }
 
 .wrap {
@@ -103,8 +100,6 @@ export default {
   min-height: 700px;
   position: relative;
   left: 0;
-
-  
 
   .imageCard {
     position: relative;

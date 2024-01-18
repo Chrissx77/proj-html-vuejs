@@ -1,4 +1,5 @@
 <script>
+import { store } from "../store";
 export default {
   name: "FeaturedProductions",
 
@@ -21,13 +22,13 @@ export default {
           image: "src/assets/work4.png",
         },
       ],
+      store,
     };
   },
 };
 </script>
 
 <template>
-
   <div class="wrap">
     <div>
       <p class="label">Our Works</p>
@@ -56,26 +57,25 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
-.image{
+.image {
   position: relative;
-  .btn-play{
+  .btn-play {
     position: absolute;
     top: 40%;
     left: 45%;
     font-size: 4rem;
-    i{
+    i {
       background-color: $orange;
       border-radius: 50%;
     }
   }
 }
 
-img{
+img {
   width: 100%;
   position: relative;
- 
 }
-.box{
+.box {
   background-color: red;
   width: 100px;
   height: 100px;

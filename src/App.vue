@@ -18,7 +18,7 @@ export default {
   </main>
   <Footer />
   <div
-    class="ritorno d-flex align-items-center justify-content-center rounded position-fixed"
+    class="ritorno d-flex align-items-center  rounded position-fixed"
   >
     <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
   </div>
@@ -38,6 +38,8 @@ export default {
   right: 20px;
   a {
     color: $white;
+    width: 100%;
+    text-align: center;
   }
 }
 

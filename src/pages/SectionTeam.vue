@@ -301,3 +301,5 @@ export default {
 } -->
 
 <!-- overflow-hidden al contenitore delle immagini -->
+
+<!--provare con bootstrap e mettere display hidden  -->

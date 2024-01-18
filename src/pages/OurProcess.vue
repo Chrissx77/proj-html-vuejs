@@ -24,29 +24,6 @@ export default {
   },
 };
 </script>
-
-<!-- <p class="label">Our Process</p>
-        <h1 class="mainTitle">Our Process for Your Animation Production</h1>
-        <p class="paragraph">
-          We have an effective process for working on animation
-        </p>
-        <div>
-          <div class="cardsContainer">
-            <div class="card" v-for="card in cardProcess">
-              <div class="cardImage">
-                <img :src="card.image" alt="" srcset="" />
-              </div>
-              <div>
-                <h5>{{ card.title }}</h5>
-              </div>
-
-              <div>
-                {{ card.paragraph }}
-              </div>
-            </div>
-          </div>
-        </div> -->
-
 <template>
   <div class="container my-5">
     <div class="row gy-5">
@@ -65,9 +42,8 @@ export default {
 
         <div class="container">
           <div class="row cardsContainer">
-            <div
-              class=" cardBox col-12 col-md-6 " v-for="card in cardProcess">
-              <div class="card">
+            <div class="cardBox col-12 col-md-6" v-for="card in cardProcess">
+              <div class="card p-4" style="height: 100%">
                 <div class="cardImage">
                   <img :src="card.image" alt="" srcset="" />
                 </div>
@@ -105,20 +81,16 @@ export default {
   .cardBox {
     order: 1;
     width: 60%;
-    margin: 10px auto;
   }
 
-  .cardsContainer{
+  .cardsContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 }
 
-
 .cardBox {
   text-align: center;
-  margin: 20px;
 }
 </style>

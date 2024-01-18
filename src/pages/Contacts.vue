@@ -1,17 +1,53 @@
 <script>
 import Loading from './Loading.vue';
-// import Header from '@/components/Header.vue';
 
 export default {
   name: "Contacts",
   components:{
     Loading,
-    // Header,
   },
 
   data(){
     return{
       isLoading: true,
+      cards: [
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process4.png",
+          title: "Motion Graphics",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process5.png",
+          title: "Character Design",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "src/assets/process1.png",
+          title: "Storyboards",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process6.png",
+          title: "Animatics",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "https://pixner.net/anidio/carton-agency/assets/img/process/process7.png",
+          title: "Film and TV",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+        {
+          img: "src/assets/process1.png",
+          title: "Script writing",
+          paragrafo:
+            "The best in the business, served to your audience’s eyeballs.",
+        },
+      ],
     }
   },
 
@@ -24,7 +60,66 @@ export default {
 </script>
 
 <template>
-  <!-- <Header /> -->
+  <Loading v-if="isLoading" />
+  <!-- header -->
+
+  <!-- inizio prima sezione jumbotron -->
+  <section class="jumbotron-bg position-relative d-flex">
+    <div class="row">
+      <!-- contenitore contenente cose in generale  -->
+      <div class="col-12">
+        <!-- inizio immagini usate per sfondo  -->
+        <div class="globo-img1 position-absolute">
+          <img src="../assets/globe1.png" alt="immagine pianeta" />
+        </div>
+        <div class="globo-img3 position-absolute">
+          <img src="../assets/globe3.png" alt="immagine pianeta" />
+        </div>
+        <div class="globe-img2 position-absolute">
+          <img
+            src="../assets/globe2.png"
+            alt="immagine pianeta"
+            class="globo-img2"
+          />
+        </div>
+        <!-- fine immagini usate per sfondo  -->
+        <!-- inizio due contenitore dove ci saranno due sfondi e testo  -->
+        <div class="container">
+          <div class="row contenitore">
+            <div class="col-6 jumbotron-left">
+              <div class="position-absolute about-us">
+                <h1>Contacts</h1>
+                <div class="mt-4">
+                  <a>
+                    <router-link :to="{ name: 'home' }"> home </router-link>
+                  </a>
+                  <i class="fa-solid fa-arrow-right"></i>
+                  <a href=""> Contacts</a>
+                </div>
+              </div>
+              <img src="../assets/dots-right.png" alt="" />
+            </div>
+            <div class="col-6 jumbotron-right">
+              <img src="../assets/dots-left.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- inizio immagini usate per sfondo  -->
+        <div class="light-img position-absolute">
+          <img src="../assets/light.png" alt="" />
+        </div>
+        <div class="img-persona position-absolute">
+          <img src="../assets/rocket-banner.png" alt="" />
+        </div>
+        <div class="onde position-absolute">
+          <img src="../assets/bottom-shape.png" alt="" />
+        </div>
+        <!-- fine immagini usate per sfondo  -->
+      </div>
+    </div>
+  </section>
+  <LoveAnimation class="pt-0 pb-4" />
+
   <div class="cont_titles">
     <h5>Contact Us</h5>
     <h1>How to Reach Us</h1>
@@ -153,7 +248,7 @@ export default {
 
     <div class="contenitore_dropdown">
       <h2>How do i know what kind of video i need?</h2>
-      <div class="container_plus" onclick="toggleMenu()">
+      <div class="container_plus">
         <i class="fa-solid fa-plus"></i>
       </div>
     </div>
@@ -202,21 +297,162 @@ export default {
   </div>
 
 
-  <Loading v-if="isLoading" />
 </template>
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
+// stili header
+
+// inizio sezione jumbotron
+// caratteristiche sfondo jumbotron
+.jumbotron-bg {
+  background-image: url(../assets/banner-bg.png);
+  background-size: cover;
+  min-height: 400px;
+  // caratteristiche tutte immagini dentro a sezione
+  img {
+    width: 100%;
+  }
+  // caratteristiche contenitore contenente due sfondi e testo
+  .contenitore {
+    @include contain;
+
+    .jumbotron-left .about-us {
+      top: 200px;
+      color: $white;
+      a {
+        color: $white;
+      }
+    }
+  }
+  // caratteristiche e posizionamento di quasi tutte le immagini dentro alla sezione
+  .onde {
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .img-persona {
+    width: 300px;
+    top: 100px;
+    right: 150px;
+    animation: rocket 2s linear infinite;
+    animation-delay: 0.3s;
+  }
+  .globo-img1 {
+    top: 12%;
+    left: 9%;
+    width: 130px;
+    height: 130px;
+    animation: rotazione 4s linear infinite;
+    animation-delay: 0.2s;
+  }
+
+  .globo-img3 {
+    top: -18%;
+    left: 33%;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .globe-img2 {
+    top: 18%;
+    right: 28%;
+    width: 100px;
+    height: 100px;
+    animation: rotazione 4s linear infinite;
+    animation-delay: 0.2s;
+  }
+
+  .light-img {
+    right: 9%;
+    top: 10%;
+    z-index: 1;
+    animation: light 2s linear infinite;
+  }
+}
+// animazioni di immagini
+@keyframes rotazione {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rocket {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes light {
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+// caratteristiche immagini al cambio pixel schermo
+@media screen and (max-width: 991px) {
+  .col-12 > .globo-img3,
+  .img-persona {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .col-12 > .light-img {
+    display: none;
+  }
+}
+// fine sezione jumbotron
+// inizio sezione service
+.service {
+  @include contain;
+  // colore del testo
+  a,
+  h2 {
+    color: $darkPurple;
+  }
+  h5 {
+    color: blue;
+  }
+}
+// fine sezione service
+// caratteristiche riguardo a componente descrizione
+.scompari {
+  display: none;
+}
+// transizione data al descizione
+.transizione-scroll {
+  animation-name: comparsa;
+  animation-duration: $duration;
+  // position: relative;
+}
+
+@keyframes comparsa {
+  0% {
+    transform: translateY(-35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
 // creazione sezione style (We’re Here to Help)
 
-// .menu-container-help{
-//   background-image: url(../assets/circle.png);
-//   background-size: cover;
-//   height: 100%;
-//   width: 100%;
-// }
 
 .contenitore_dropdown{
   display: flex ;
@@ -240,7 +476,7 @@ export default {
 }
 
 .container_plus{
-  border: solid 1px $purple;
+  border: solid 1px #D2CBDA;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -250,14 +486,9 @@ export default {
   font-size: 25px;
 }
 
-
-
-
-
-
-
-
-
+.container_plus i{
+  color: $blue;
+}
 
 
 

@@ -17,12 +17,16 @@ export default {
       <button class="btn-portfolio">Portfolio</button>
       <div class="thumb">
         <div>
-          <img src="../assets/middle.png" alt="" />
-          <a href="" class="play-tag">
+          <img src="../assets/middle.png" alt="#" />
+          <a href=" " class="play-tag">
             <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
           </a>
-          <!-- crearo il secondo tag i cosi che faccia da sfondo fisso -->
-          <a href="" class="play-tag-riflesso">
+          <!-- crearo il secondo tag i cosi che faccia da sfondo fisso questo tag è sopra all'altro -->
+          <a
+            href="https://www.youtube.com/watch?v=sNub3X8fHew"
+            class="play-tag-riflesso"
+            target="_blank"
+          >
             <i class="fa-solid fa-circle-play" style="color: #a616ea"></i>
           </a>
         </div>
@@ -31,35 +35,35 @@ export default {
 
     <!-- Sezione Immagini Jumbo -->
     <div class="starsLeft">
-      <img src="../assets/dots-left.png" alt="" srcset="" />
+      <img src="../assets/dots-left.png" alt="#" srcset="" />
     </div>
 
     <div class="starsRight">
-      <img src="../assets/dots-right.png" alt="" srcset="" />
+      <img src="../assets/dots-right.png" alt="#" srcset="" />
     </div>
 
     <div class="imageAstroneer">
-      <img src="../assets/left-man.png" alt="" srcset="" />
+      <img src="../assets/left-man.png" alt="#" srcset="" />
     </div>
 
     <div class="imageAstroneerPC">
-      <img src="../assets/right-man.png" alt="" srcset="" />
+      <img src="../assets/right-man.png" alt="#" srcset="" />
     </div>
 
     <div class="planet">
-      <img src="../assets/globe1.png" alt="" srcset="" />
+      <img src="../assets/globe1.png" alt="#" srcset="" />
     </div>
 
     <div class="moon">
-      <img src="../assets/globe2.png" alt="" srcset="" />
+      <img src="../assets/globe2.png" alt="#" srcset="" />
     </div>
 
     <div class="alien">
-      <img src="../assets/light.png" alt="" srcset="" />
+      <img src="../assets/light.png" alt="#" srcset="" />
     </div>
 
     <div class="banner">
-      <img src="../assets/bottom-shape.png" alt="" srcset="" />
+      <img src="../assets/bottom-shape.png" alt="#" srcset="" />
     </div>
   </section>
 </template>

@@ -1,4 +1,5 @@
 <script>
+// import store
 import { store } from "../store";
 export default {
   name: "Client",
@@ -34,7 +35,7 @@ export default {
     };
   },
   mounted() {
-    // elemento presi dentro al documento
+    // elemento preso dentro al documento
     let elementclient = document.querySelector(".elementclienti");
     // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elementclient);
@@ -90,7 +91,7 @@ export default {
 .scompari {
   display: none;
 }
-// transizione data al elementclient
+// transizione elementclient
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: 4s;

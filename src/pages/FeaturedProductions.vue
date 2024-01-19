@@ -244,8 +244,6 @@ image {
 .play-item {
   animation: impulso 1.1s linear infinite;
   animation-delay: 0.4s;
-  content: "";
-  display: block;
 }
 
 @keyframes impulso {

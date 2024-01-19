@@ -1,15 +1,17 @@
 <script>
-import Loading from './Loading.vue';
+// import loading
+import Loading from "./Loading.vue";
 
 export default {
   name: "Contacts",
-  components:{
+  components: {
     Loading,
   },
 
-  data(){
-    return{
+  data() {
+    return {
       isLoading: true,
+      // array condentro informazioni
       cards: [
         {
           img: "https://pixner.net/anidio/carton-agency/assets/img/process/process4.png",
@@ -48,13 +50,14 @@ export default {
             "The best in the business, served to your audience’s eyeballs.",
         },
       ],
-    }
+    };
   },
 
-  mounted(){
+  mounted() {
+    // codice per scomparsa loading
     setTimeout(() => {
       this.isLoading = false;
-    }, 1500)
+    }, 1500);
   },
 };
 </script>
@@ -104,6 +107,7 @@ export default {
             </div>
           </div>
         </div>
+        <!-- fine due contenitore dove ci saranno due sfondi e testo  -->
         <!-- inizio immagini usate per sfondo  -->
         <div class="light-img position-absolute">
           <img src="../assets/light.png" alt="" />
@@ -123,25 +127,25 @@ export default {
   <div class="cont_titles">
     <h5>Contact Us</h5>
     <h1>How to Reach Us</h1>
-    <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
+    <p>
+      We're always interested in having a chat or discussing your next big
+      project, so drop us a line!
+    </p>
   </div>
 
   <div class="big_cont">
     <div class="shape-">
-      <img src="../assets/shape-top.png" alt="##">
+      <img src="../assets/shape-top.png" alt="##" />
     </div>
 
-
     <div class="conteiner_wrapper">
-
       <div class="container_left">
-
         <div class="contenitore_comp_scheda">
           <h1>Reach us directly!</h1>
           <div class="contenitore_schede">
             <div class="scheda">
               <div class="cont_loghi">
-                <img src="../assets//map.png" alt="">
+                <img src="../assets//map.png" alt="" />
               </div>
               <div class="estremi">
                 <h5>Address</h5>
@@ -153,7 +157,7 @@ export default {
           <div class="contenitore_schede">
             <div class="scheda">
               <div class="cont_loghi">
-                <img src="../assets//email.png" alt="">
+                <img src="../assets//email.png" alt="" />
               </div>
               <div class="estremi">
                 <h5>Email</h5>
@@ -165,7 +169,7 @@ export default {
           <div class="contenitore_schede">
             <div class="scheda">
               <div class="cont_loghi">
-                <img src="../assets//phone.png" alt="">
+                <img src="../assets//phone.png" alt="" />
               </div>
               <div class="estremi">
                 <h5>Phone:</h5>
@@ -174,66 +178,63 @@ export default {
             </div>
           </div>
           <div class="mod_hr">
-            <hr>
+            <hr />
           </div>
           <h4>Follow us</h4>
 
           <div class="menu">
-          
-          <div class="menu__social">
-            <div><i class="fa-brands fa-facebook"></i></div>
-            <div><i class="fa-brands fa-instagram"></i></div>  
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fa-brands fa-whatsapp"></i></div>           
+            <div class="menu__social">
+              <div><i class="fa-brands fa-facebook"></i></div>
+              <div><i class="fa-brands fa-instagram"></i></div>
+              <div><i class="fa-brands fa-twitter"></i></div>
+              <div><i class="fa-brands fa-whatsapp"></i></div>
+            </div>
           </div>
-  
         </div>
-        </div>
-
-        
-
-        
       </div>
 
       <div class="container_right">
         <div class="wrapper_border">
-
           <div class="wrapper_right">
             <div class="wrapper_us">
               <h1>Contact form</h1>
               <p>Tell us your story and let's make it awesome</p>
             </div>
-  
+
             <div>
               <div class="name">
                 <p>NAME</p>
-                <input type="text" placeholder="What's your name?">
+                <input type="text" placeholder="What's your name?" />
               </div>
               <div class="email">
                 <p>EMAIL</p>
-                <input type="email" placeholder="What's your email?">
+                <input type="email" placeholder="What's your email?" />
               </div>
               <div class="number">
                 <p>PHONE</p>
-                <input type="number" placeholder="your number?">
+                <input type="number" placeholder="your number?" />
               </div>
               <div class="message">
                 <p>LEAVE A MESSAGE</p>
-                <textarea name="message" id="message" cols="10" rows="5" placeholder="Please type your message here..."></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="10"
+                  rows="5"
+                  placeholder="Please type your message here..."
+                ></textarea>
               </div>
             </div>
           </div>
           <div class="bottone">
             <button type="submit"><b>Request a quote</b></button>
           </div>
-
         </div>
       </div>
     </div>
 
-    
     <div class="shape-">
-      <img src="../assets/shape-bottom.png" alt="##">
+      <img src="../assets/shape-bottom.png" alt="##" />
     </div>
   </div>
 
@@ -243,7 +244,10 @@ export default {
     <div class="cont_titles">
       <h5>We're Here to Help</h5>
       <h1>Frequently Asked Questions</h1>
-      <p>We're always interested in having a chat or discussing your next big project, so drop us a line!</p>
+      <p>
+        We're always interested in having a chat or discussing your next big
+        project, so drop us a line!
+      </p>
     </div>
 
     <div class="contenitore_dropdown">
@@ -295,8 +299,6 @@ export default {
       </div>
     </div>
   </div>
-
-
 </template>
 
 <style lang="scss" scoped>
@@ -449,13 +451,10 @@ export default {
   }
 }
 
-
-
 // creazione sezione style (We’re Here to Help)
 
-
-.contenitore_dropdown{
-  display: flex ;
+.contenitore_dropdown {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 50%;
@@ -467,16 +466,16 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contenitore_dropdown h2{
+.contenitore_dropdown h2 {
   padding-right: 150px;
   font-size: 25px;
 }
-.contenitore_dropdown div{
+.contenitore_dropdown div {
   margin-right: 25px;
 }
 
-.container_plus{
-  border: solid 1px #D2CBDA;
+.container_plus {
+  border: solid 1px #d2cbda;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -486,69 +485,68 @@ export default {
   font-size: 25px;
 }
 
-.container_plus i{
+.container_plus i {
   color: $blue;
 }
-
-
-
 
 // stili contenitore titoli
 .cont_titles {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   text-align: center;
   position: relative;
   height: 100%;
 }
 
-.shape- img{
+.shape- img {
   width: 100%;
 }
-.cont_titles h5{
+.cont_titles h5 {
   color: $blue;
 }
-.cont_titles h1{
+.cont_titles h1 {
   color: $darkPurple;
 }
-.cont_titles p{
+.cont_titles p {
   color: $darkPurple;
 }
-.cont_titles p, h1, h5{
+.cont_titles p,
+h1,
+h5 {
   margin: 10px 0;
 }
 
 // stile contenitore grande rosa
 
-.big_cont{
+.big_cont {
   margin: 0 auto;
   width: 85%;
   height: fit-content;
-  background-color: #EBE5FF;
+  background-color: #ebe5ff;
   position: relative;
 }
 
-.conteiner_wrapper{
+.conteiner_wrapper {
   display: flex;
 }
 // stili sottocontenitore wrapper
-.container_left{
+.container_left {
   width: 50%;
   height: 50px;
   // background-color: blue;
 }
 
-.container_right{
+.container_right {
   width: 50%;
-  height:fit-content;
+  height: fit-content;
   // background-color: red;
 }
 
 // stili schede
 
-.cont_loghi{
+.cont_loghi {
   width: 90px;
   height: 90px;
   line-height: 90px;
@@ -558,7 +556,7 @@ export default {
   margin-right: 15px;
 }
 
-.scheda{
+.scheda {
   background-color: $white;
   width: 100%;
   padding: 7px;
@@ -568,52 +566,53 @@ export default {
   margin-top: 30px;
 }
 
-.estremi, h4{
+.estremi,
+h4 {
   color: $purple;
 }
 
-.estremi h5{
+.estremi h5 {
   font-weight: 650;
 }
 
-.estremi p{
+.estremi p {
   font-weight: 550;
 }
 
-.contenitore_comp_scheda:first-child{
+.contenitore_comp_scheda:first-child {
   margin-top: 150px;
   margin-left: 15px;
   width: 70%;
 }
 
-.mod_hr{
+.mod_hr {
   padding-top: 18px;
 }
 
 // mod loghi social
 
-.menu__social{
+.menu__social {
   display: flex;
 }
 
-.menu__social div i{
+.menu__social div i {
   color: $darkPurple;
 }
-.menu{
+.menu {
   display: flex;
   align-items: center;
 }
 
-.menu__social div{
+.menu__social div {
   border-radius: 100%;
   border: 1px solid $darkPurple;
-  cursor : pointer;
+  cursor: pointer;
   display: flex;
   padding: 5px;
   margin-inline: 5px;
-  &:hover{
+  &:hover {
     background-color: $orange;
-    i{
+    i {
       color: $white;
     }
   }
@@ -624,7 +623,7 @@ export default {
 .name input,
 .email input,
 .number input,
-.message textarea{
+.message textarea {
   border-radius: 10px;
   height: 50px;
   width: 100%;
@@ -632,11 +631,14 @@ export default {
   outline: none;
 }
 
-.number, .email, .message, .name > p{
+.number,
+.email,
+.message,
+.name > p {
   font-weight: 700;
 }
 
-.message textarea{
+.message textarea {
   border-radius: 10px;
   min-height: 200px;
   width: 100%;
@@ -644,45 +646,44 @@ export default {
   outline: none;
 }
 
-
 .name input,
 .email input,
-.number input{
+.number input {
   margin-bottom: 25px;
 }
 
-.wrapper_us{
+.wrapper_us {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 25px;
 }
 
-.wrapper_right{
+.wrapper_right {
   padding-inline: 15px;
 }
 
-.wrapper_border{
+.wrapper_border {
   border-radius: 30px;
   border: 1px solid $gray;
   margin-right: 10px;
   margin-top: 70px;
   margin-bottom: 15px;
-  background-color: #F7F0FE;
+  background-color: #f7f0fe;
 }
 // stile tasto
 
-.bottone{
+.bottone {
   padding: 10px;
   padding-top: 20px;
 }
 
-.bottone button{
+.bottone button {
   width: 100%;
   height: 50px;
   border-radius: 40px;
   border: none;
   background-color: $pink;
-  &:hover{
+  &:hover {
     background-color: #fff;
     border: solid 3px $pink;
   }

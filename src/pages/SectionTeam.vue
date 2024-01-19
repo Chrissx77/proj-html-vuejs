@@ -1,38 +1,34 @@
 <script>
+// import store 
 import { store } from "../store";
 export default {
   name: "SectionTeam",
   data() {
     return {
       // array di persone del team
-
       cardTeam: [
         {
           image: "src/assets/team1.png",
           name: "Don Woods",
           label: "Administrator",
-          dispay: false,
         },
 
         {
           image: "src/assets/team2.png",
           name: "Tomas Nash",
           label: "2d Animator & Compositor",
-          dispay: true,
         },
 
         {
           image: "src/assets/team2.png",
           name: "Hector Vargas",
           label: "Project Lead & Senior Animator",
-          dispay: true,
         },
 
         {
           image: "src/assets/team4.png",
           name: "Robert Coleman",
           label: "Owner & Creative Director",
-          dispay: true,
         },
       ],
       store,
@@ -152,7 +148,7 @@ export default {
         width: 40px;
         height: 40px;
       }
-      // over su icone social
+      // hover su icone social
       a:hover {
         background-color: $orange;
         color: $white;

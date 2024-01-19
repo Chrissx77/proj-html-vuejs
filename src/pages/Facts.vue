@@ -1,9 +1,11 @@
 <script>
+// import sotre
 import { store } from "../store";
 export default {
   name: "Facts",
   data() {
     return {
+      // array con dentro informazioni
       cardFacts: [
         {
           label: "Projects done",
@@ -46,11 +48,13 @@ export default {
     <div class="globe-img position-absolute">
       <img src="../assets/globe.png" alt="#" />
     </div>
+    <!-- inizio infromazioni facts -->
     <div class="container-fluid position-relative">
       <div class="row">
         <div style="height: 110px">
           <h1 class="text-center text-white title">anidio quick facts</h1>
         </div>
+        <!-- card con dentro informazioni dentro all'array  -->
         <div
           class="col-12 col-sm-6 col-lg-4 col-xxl-3 text-center"
           v-for="(card, i) in cardFacts"
@@ -65,6 +69,7 @@ export default {
         </div>
       </div>
     </div>
+    <!-- fine informazioni facts -->
     <div>
       <img src="../assets/shape-bottom.png" alt="#" class="onde" />
     </div>
@@ -77,7 +82,7 @@ export default {
 section {
   background-image: url(../assets/counter-bg.png);
   margin-top: 200px;
-
+  // caratteristiche per immagini
   .onde {
     width: 100%;
     display: block;
@@ -94,6 +99,7 @@ section {
       width: 100%;
     }
   }
+  // caratteristiche per informazioni facts
   .container-fluid {
     @include contain;
     padding: 100px 0;

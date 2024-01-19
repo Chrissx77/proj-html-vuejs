@@ -143,7 +143,7 @@ export default {
 .scompari {
   display: none;
 }
-// transizione data al description-animation
+// transizione  description-animation
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;

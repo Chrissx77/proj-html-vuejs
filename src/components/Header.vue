@@ -44,17 +44,20 @@ export default {
           <!-- ul per cambiare pagine  -->
           <ul class="navbar-nav p-2">
             <li class="nav-item my-1 ps-2">
+              <!-- link per page home -->
               <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'home' }"> home </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
+              <!-- link per page about us -->
               <a class="nav-link active" aria-current="page" href="#">
                 <router-link :to="{ name: 'about' }"> about us </router-link>
               </a>
             </li>
             <li class="nav-item my-1 ps-2">
               <a class="nav-link" href="#">
+                <!-- link per page contacts -->
                 <router-link :to="{ name: 'contacts' }"> contacts </router-link>
               </a>
             </li>

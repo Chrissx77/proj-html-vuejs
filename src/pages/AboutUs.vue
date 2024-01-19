@@ -1,9 +1,15 @@
 <script>
+// import page loveAnimation
 import LoveAnimation from "./LoveAnimation.vue";
+// import page facts
 import Facts from "./Facts.vue";
+// import page sectionsteam
 import SectionTeam from "./SectionTeam.vue";
+// import page client
 import Client from "./Client.vue";
+// import store
 import { store } from "../store";
+// import loading
 import Loading from "./Loading.vue";
 
 export default {
@@ -63,7 +69,7 @@ export default {
   mounted() {
     // elemento presi dentro al documento
     let elemento = document.querySelector(".descrizione");
-
+    // array con dentro le cards
     let cards = document.querySelectorAll(".card-service");
 
     for (let i = 0; i < this.cards.length; i++) {
@@ -124,6 +130,7 @@ export default {
             </div>
           </div>
         </div>
+        <!-- inizio due contenitore dove ci saranno due sfondi e testo  -->
         <!-- inizio immagini usate per sfondo  -->
         <div class="light-img position-absolute">
           <img src="../assets/light.png" alt="" />
@@ -140,8 +147,8 @@ export default {
   </section>
   <LoveAnimation class="pt-0 pb-4" />
   <Facts />
+  <!-- caratteristiche della sezione  -->
   <section>
-    <!-- caratteristiche della sezione  -->
     <div class="service">
       <div class="container-fluid py-4">
         <div class="row" style="height: 116px">
@@ -311,7 +318,7 @@ export default {
 .scompari {
   display: none;
 }
-// transizione data al descizione
+// transizione descizione
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;

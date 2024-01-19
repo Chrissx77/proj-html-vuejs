@@ -1,18 +1,6 @@
 <script>
-import { store } from "../store";
 export default {
   name: "Footer",
-  data() {
-    return {
-      store,
-    };
-  },
-  mounted() {
-    // elemento presi dentro al documento
-    // let containertips = document.querySelector(".containertips");
-
-    // store.transformElement(containertips);
-  },
 };
 </script>
 
@@ -242,25 +230,4 @@ input {
   }
 }
 
-// caratteristiche riguardo a componente descrizione-features
-.scompari {
-  display: none;
-}
-// transizione data al image
-.transizione-scroll {
-  animation-name: comparsa;
-  animation-duration: 5s;
-  // position: relative;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 </style>

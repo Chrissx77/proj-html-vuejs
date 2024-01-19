@@ -3,6 +3,7 @@ import { store } from "../store";
 export default {
   name: "FeaturedProductions",
 
+  //Array di Immagini del componente
   data() {
     return {
       cardProd: [
@@ -25,6 +26,7 @@ export default {
       store,
     };
   },
+  //Animazione di Transizione del componente
   mounted() {
     let descriptionproductions = document.querySelector(
       ".descrizione-features"
@@ -43,6 +45,7 @@ export default {
 
 <template>
   <div class="wrap">
+    <!-- Sezione Text -->
     <div class="descrizione-features" style="min-height: 120px">
       <p class="label">Our Works</p>
       <h1 class="mainTitle">Featured Productions</h1>
@@ -52,10 +55,12 @@ export default {
         contact with us.
       </p>
     </div>
+    <!-- Sezione Cards -->
     <div class="container" style="min-height: 900px">
       <div class="row gy-5">
         <div v-for="card in cardProd" class="col-12 col-md-6 image my-4">
-          <div class="backcomparsa">
+          <!-- animazione sfondo animato e play-Btn -->
+          <div class="backcomparsa"> 
             <a href="#" class="btn-play">
               <i
                 class="fa-solid fa-circle-play play-item"

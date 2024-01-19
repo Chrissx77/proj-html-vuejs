@@ -5,6 +5,7 @@ export default {
 
   data() {
     return {
+      //Array Dati del Componente
       cardLoveAnimation: [
         {
           image: "src/assets/smart1.png",
@@ -67,6 +68,7 @@ export default {
         </div>
       </div>
     </div>
+    <!-- Immagine di sinistra che scompare a md-display -->
     <img class="imageLeft" src="../assets/smart.png" alt="" />
   </div>
 </template>
@@ -149,6 +151,8 @@ export default {
   animation-duration: $duration;
 }
 
+
+// Sezione KeyFrames
 @keyframes comparsa {
   0% {
     transform: translateY(-30px);

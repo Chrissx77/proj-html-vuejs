@@ -1,5 +1,5 @@
 <script>
-// import store 
+// import store
 import { store } from "../store";
 export default {
   name: "SectionTeam",
@@ -69,7 +69,7 @@ export default {
             >
               >
               <div class="team-iesimo">
-                <img :src="card.image" alt="#"  class="position-relative"/>
+                <img :src="card.image" alt="#" class="position-relative" />
                 <div class="my-4">
                   <h4>
                     {{ card.name }}
@@ -194,17 +194,6 @@ export default {
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 // animazione pianeti
 @keyframes zoominside {

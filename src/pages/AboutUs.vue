@@ -232,7 +232,7 @@ export default {
     left: 9%;
     width: 130px;
     height: 130px;
-    animation: rotazione 4s linear infinite;
+    animation: globe1 4s linear infinite;
     animation-delay: 0.2s;
   }
 
@@ -248,7 +248,7 @@ export default {
     right: 28%;
     width: 100px;
     height: 100px;
-    animation: rotazione 4s linear infinite;
+    animation: globe1 4s linear infinite;
     animation-delay: 0.2s;
   }
 
@@ -256,35 +256,7 @@ export default {
     right: 9%;
     top: 10%;
     z-index: 1;
-    animation: light 2s linear infinite;
-  }
-}
-// animazioni di immagini
-@keyframes rotazione {
-  0% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rocket {
-  0% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-
-  100% {
-    transform: translateY(5px);
-  }
-}
-
-@keyframes light {
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
+    animation: lightopen 2s linear infinite;
   }
 }
 // caratteristiche immagini al cambio pixel schermo
@@ -322,16 +294,5 @@ export default {
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 </style>

@@ -189,17 +189,6 @@ button {
   // position: relative;
 }
 
-@keyframes comparsa {
-  0% {
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 // caratteristiche over su immagini
 .image:hover {
   // incliinazione lungo l'asse delle y
@@ -249,16 +238,5 @@ image {
 .play-item {
   animation: impulso 1.1s linear infinite;
   animation-delay: 0.4s;
-}
-
-@keyframes impulso {
-  100% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
 }
 </style>

@@ -14,6 +14,71 @@ a{
 ul{
     list-style: none;
 }
+// animazione aggiunta ad elementi facts ,ourprocess,about us, client, featured production , love animation, section team
+@keyframes comparsa {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+// animazione pianeti in jumbotron, e aboutus in jumbotron
+  @keyframes globe1 {
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+// animazione astronave in jumbotron,  e aboutus in jumbotron
+  @keyframes lightopen {
+    50% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+//   animaznioni impulso in jumbotron e featureproduction
+@keyframes impulso {
+    100% {
+      transform: scale(2.1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(3.1);
+      opacity: 0;
+    }
+  }
+// animazioni astronauti in jumbotron
+  @keyframes fly1 {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+// animazione rocket in about us jumbotron
+  @keyframes rocket {
+    0% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  
+    100% {
+      transform: translateY(5px);
+    }
+  }
 
 
 

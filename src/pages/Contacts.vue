@@ -428,28 +428,6 @@ export default {
     color: blue;
   }
 }
-// fine sezione service
-// caratteristiche riguardo a componente descrizione
-.scompari {
-  display: none;
-}
-// transizione data al descizione
-.transizione-scroll {
-  animation-name: comparsa;
-  animation-duration: $duration;
-  // position: relative;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 // creazione sezione style (We’re Here to Help)
 

@@ -92,7 +92,7 @@ section {
     max-width: 350px;
     top: 50%;
     left: 50%;
-    animation: rotazione 30s linear infinite;
+    animation: rotzione 30s linear infinite;
     animation-delay: 0.3s;
     transform: translate(-50%, -50%);
     img {
@@ -141,16 +141,5 @@ section {
 .transizione-scroll {
   animation-name: comparsa;
   animation-duration: $duration;
-}
-
-@keyframes comparsa {
-  0% {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 </style>

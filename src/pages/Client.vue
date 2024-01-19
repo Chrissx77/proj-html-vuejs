@@ -39,6 +39,29 @@ export default {
     let elementclient = document.querySelector(".elementclienti");
     // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elementclient);
+    // libreria glide
+    new Glide("#carouselclient", {
+      type: "carousel",
+      // inizio delle immagini
+      startAt: 0,
+      // Numero di elementi visualizzati contemporaneamente
+      perView: 5,
+      // Autoplay ogni tot secondi
+      autoplay: 2000,
+      // quando mouse è sopra si ferma autoplay
+      hoverpause: true,
+      // spazio tra le card
+      gap: 16,
+      // cambio ad ogni breackpoint
+      breakpoints: {
+        762: {
+          perView: 3,
+        },
+        1042: {
+          perView: 4,
+        },
+      },
+    }).mount();
   },
 };
 </script>
@@ -59,13 +82,15 @@ export default {
           </div>
         </div>
         <div class="row text-center my-4">
-          <!-- cards contenenti i loghi dei clienti -->
-          <div
-            class="col-6 col-md-4 col-lg-3 col-xxl-2"
-            v-for="(image, i) in cardClient"
-            :key="i"
-          >
-            <img :src="image.image" alt="" />
+          <div class="glide" id="carouselclient">
+            <!-- ha ovrflow hidden  -->
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide" v-for="card in cardClient">
+                  <img :src="card.image" alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -86,6 +111,9 @@ export default {
   h5 {
     color: blue;
   }
+  img {
+    width: 100%;
+  }
 }
 // caratteristiche riguardo  componente elementiclient
 .scompari {
@@ -96,6 +124,4 @@ export default {
   animation-name: comparsa;
   animation-duration: 4s;
 }
-
-
 </style>

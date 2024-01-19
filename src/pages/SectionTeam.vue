@@ -39,6 +39,29 @@ export default {
     let elementoTeam = document.querySelector(".elementiteam");
     // Chiamata alla funzione all'interno dell'oggetto
     store.transformElement(elementoTeam);
+    // libreria glide
+    new Glide("#carouselsectionteam", {
+      type: "carousel",
+      // inizio delle immagini
+      startAt: 0,
+      // Numero di elementi visualizzati contemporaneamente
+      perView: 4,
+      // Autoplay ogni tot secondi
+      autoplay: 2000,
+      // quando mouse è sopra si ferma autoplay
+      hoverpause: true,
+      // spazio tra le card
+      gap: 16,
+      // cambio ad ogni breackpoint
+      breakpoints: {
+        935: {
+          perView: 2,
+        },
+        1337: {
+          perView: 3,
+        },
+      },
+    }).mount();
   },
 };
 </script>
@@ -62,44 +85,53 @@ export default {
           </div>
           <!-- inizio componenti del team -->
           <div class="row text-center my-5">
-            <div
-              class="col-12 col-md-6 col-lg-4 col-xl-3 my-5"
-              v-for="(card, i) in cardTeam"
-              :key="i"
-            >
-              >
-              <div class="team-iesimo">
-                <img :src="card.image" alt="#" class="position-relative" />
-                <div class="my-4">
-                  <h4>
-                    {{ card.name }}
-                  </h4>
-                </div>
-                <p>
-                  {{ card.label }}
-                </p>
-                <ul class="d-flex ps-0 justify-content-center">
-                  <!-- icone social -->
-                  <li class="mx-3">
-                    <a
-                      href="#"
-                      class="rounded-circle d-flex align-items-center justify-content-center"
-                      ><i class="fa-brands fa-instagram"></i
-                    ></a>
-                  </li>
-                  <li class="mx-3">
-                    <a
-                      href="#"
-                      class="rounded-circle d-flex align-items-center justify-content-center"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </li>
-                  <li class="mx-3">
-                    <a
-                      href="#"
-                      class="rounded-circle d-flex align-items-center justify-content-center"
-                      ><i class="fa-brands fa-facebook"></i
-                    ></a>
+            <div class="glide" id="carouselsectionteam">
+              <!-- div con dentro i membri del team -->
+              <!-- caratteristiche glide -->
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li
+                    class="glide__slide"
+                    v-for="card in cardTeam"
+                    style="
+                      background-color: #fff5f0;
+                      padding: 10px;
+                      border-radius: 15px;
+                    "
+                  >
+                    <img :src="card.image" alt="#" style="width: 100%" />
+                    <div class="my-4">
+                      <h4>
+                        {{ card.name }}
+                      </h4>
+                    </div>
+                    <p>
+                      {{ card.label }}
+                    </p>
+                    <ul class="d-flex ps-0 justify-content-center">
+                      <!-- icone social -->
+                      <li class="mx-3">
+                        <a
+                          href="#"
+                          class="rounded-circle d-flex align-items-center justify-content-center"
+                          ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                      </li>
+                      <li class="mx-3">
+                        <a
+                          href="#"
+                          class="rounded-circle d-flex align-items-center justify-content-center"
+                          ><i class="fa-brands fa-x-twitter"></i
+                        ></a>
+                      </li>
+                      <li class="mx-3">
+                        <a
+                          href="#"
+                          class="rounded-circle d-flex align-items-center justify-content-center"
+                          ><i class="fa-brands fa-facebook"></i
+                        ></a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -131,59 +163,43 @@ export default {
   h5 {
     color: blue;
   }
-  // caratteristiche card
-  .team-iesimo {
-    background-color: #fff5f0;
-    padding: 10px 20px;
-    border-radius: 15px;
-
-    img {
-      width: 100%;
-      top: -70px;
+  li {
+    a {
+      background-color: $white;
+      width: 40px;
+      height: 40px;
     }
-
-    li {
-      a {
-        background-color: $white;
-        width: 40px;
-        height: 40px;
-      }
-      // hover su icone social
-      a:hover {
-        background-color: $orange;
-        color: $white;
-      }
+    // hover su icone social
+    a:hover {
+      background-color: $orange;
+      color: $white;
     }
   }
-  // immagini pianeti di sottofondo
-  .planet-img1 {
-    max-width: 750px;
-    z-index: -2;
-    left: -60px;
-    animation: zoominside 4s linear infinite;
-    animation-delay: 0.8s;
-    // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
-    animation-direction: alternate;
-    img {
-      width: 100%;
-    }
+}
+// immagini pianeti di sottofondo
+.planet-img1 {
+  max-width: 750px;
+  z-index: -2;
+  left: -60px;
+  animation: zoominside 4s linear infinite;
+  animation-delay: 0.8s;
+  // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
+  animation-direction: alternate;
+  img {
+    width: 100%;
   }
+}
 
-  .planet-img2 {
-    max-width: 750px;
-    right: 0px;
-    z-index: -1;
-    animation: zoomasseX 4s linear infinite;
-    animation-delay: 0.8s;
-    // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
-    animation-direction: alternate;
-    img {
-      width: 100%;
-    }
-  }
-  // hover su card che traslata le immagini
-  .team-iesimo:hover img {
-    transform: translate(0px, 10px);
+.planet-img2 {
+  max-width: 750px;
+  right: 0px;
+  z-index: -1;
+  animation: zoomasseX 4s linear infinite;
+  animation-delay: 0.8s;
+  // la fa andare anvanti e indietro senza farla ripartire a suo punto di partenza Play the animation forwards first, then backwards:
+  animation-direction: alternate;
+  img {
+    width: 100%;
   }
 }
 // caratteristiche riguardo componente elementiteam

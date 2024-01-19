@@ -29,6 +29,8 @@ export default {
       </div>
     </div>
 
+
+    <!-- Sezione Immagini Jumbo -->
     <div class="starsLeft">
       <img src="../assets/dots-left.png" alt="" srcset="" />
     </div>
@@ -60,6 +62,7 @@ export default {
     <div class="banner">
       <img src="../assets/bottom-shape.png" alt="" srcset="" />
     </div>
+
   </section>
 </template>
 
@@ -211,36 +214,7 @@ export default {
     }
   }
 
-  //Animation
-  @keyframes fly1 {
-    0% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-15px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes globe1 {
-    0% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes lightopen {
-    50% {
-      transform: rotate(10deg);
-    }
-
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-}
+  
 
 // animazione display play
 .play-tag {
@@ -252,6 +226,44 @@ export default {
   animation: impulso 1.1s linear infinite, impulso 1.2s linear infinite;
   animation-delay: 0.4s;
 }
+
+.play-tag-riflesso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+//Animation KeyFrames
+@keyframes fly1 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes globe1 {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lightopen {
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+}
+
 // stessa animazione ma con durata diversa in modo da far sembrare che siano due
 @keyframes impulso {
   100% {
@@ -264,9 +276,4 @@ export default {
   }
 }
 
-.play-tag-riflesso {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
 </style>

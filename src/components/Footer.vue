@@ -7,12 +7,6 @@ export default {
       store,
     };
   },
-  mounted() {
-    // elemento presi dentro al documento
-    // let containertips = document.querySelector(".containertips");
-
-    // store.transformElement(containertips);
-  },
 };
 </script>
 

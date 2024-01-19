@@ -4,6 +4,7 @@ export default {
   name: "OurProcess",
   data() {
     return {
+      // Array Dati del Componente
       cardProcess: [
         {
           image: "src/assets/process1.png",
@@ -33,6 +34,7 @@ export default {
 };
 </script>
 <template>
+  <!-- Immagine rocketWomen -->
   <div class="container my-5">
     <div class="row gy-5">
       <div class="col-12 col-md-6 imageRocketWomen">
@@ -52,6 +54,7 @@ export default {
           </div>
         </div>
 
+        <!-- Container Cards componente -->
         <div class="container">
           <div class="row cardsContainer">
             <div class="cardBox col-12 col-md-6" v-for="card in cardProcess">
@@ -124,6 +127,7 @@ export default {
   border-radius: 30px;
 }
 
+//Sezione Media Query
 @media screen and (max-width: 600px) {
   .imageRocketWomen {
     order: 5;
@@ -142,7 +146,7 @@ export default {
 }
 
 
-
+//Sezione KeyFrames
 @keyframes fly1 {
   0% {
     transform: translateX(0px);

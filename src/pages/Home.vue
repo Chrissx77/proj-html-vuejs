@@ -1,4 +1,6 @@
 <script>
+
+//Importo i componenti
 import LoveAnimation from "./LoveAnimation.vue";
 import Facts from "./Facts.vue";
 import SectionTeam from "./SectionTeam.vue";
@@ -22,10 +24,12 @@ export default {
   },
   data() {
     return {
+      //Paramentro del componente di Loading
       isLoading: true,
     };
   },
   mounted() {
+    //pagina di loading con timer 1,5 secondi.
     setTimeout(() => {
       this.isLoading = false;
     }, 1500);
@@ -34,6 +38,7 @@ export default {
 </script>
 
 <template>
+  <!-- Componente di Loading-->
   <Loading v-if="isLoading" />
   <Jumbotron />
   <LoveAnimation />
